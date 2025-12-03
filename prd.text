@@ -1,0 +1,465 @@
+# **📄 Product Requirements Document (PRD)**
+
+### **Marketing Agency Website (Next.js 14 + Prismic CMS)**
+
+Based on provided Figma screens + your project requirements
+
+---
+
+# **1. Product Overview**
+
+This website is a marketing agency platform built in **Next.js 14 (App Router)** with content fully managed in **Prismic CMS** using **Slice Machine**.
+The design follows your Figma layout with sections for:
+
+* Home
+* Services
+* About Us
+* Blogs
+* Blog Details
+* Pricing
+* Case Studies
+* Detailed Service Page (Digital Marketing)
+* Contact (footer form)
+
+The goal is a **modern, responsive, CMS-editable website** optimized for performance and SEO.
+
+---
+
+# **2. Tech Stack**
+
+### **Core**
+
+* **Next.js 14 App Router**
+* **Prismic CMS** (Repository + Custom Types + Slices)
+* **Slice Machine** for component-driven development
+* **TypeScript**
+* **Tailwind CSS** (recommended for speed)
+
+### **Hosting**
+
+* **Vercel** (recommended)
+
+### **Integrations**
+
+* Prismic API (GraphQuery)
+* Contact form handler (serverless API route)
+* Vercel Image Optimization
+
+---
+
+# **3. Routing Structure (Next.js App Router)**
+
+```
+/app
+  /page.tsx                   → Home
+  /services/page.tsx          → Services listing
+  /services/[uid]/page.tsx    → Single service
+  /about/page.tsx             → About
+  /blogs/page.tsx             → Blog listing
+  /blogs/[uid]/page.tsx       → Blog single
+  /pricing/page.tsx           → Pricing
+  /case-studies/page.tsx      → Case Study listing
+  /case-studies/[uid]/page.tsx→ Case Study single
+  /api/contact/route.ts       → Form submission
+```
+
+All content dynamically served from **Prismic**.
+
+---
+
+# **4. Prismic Content Model Design**
+
+Here is the exact content structure you need to create in Prismic.
+
+---
+
+# **4.1 Custom Types**
+
+## **A. Pages (Repeatable + Singleton)**
+
+### **1) Home (Singleton)**
+
+Fields:
+
+* hero_title (Rich Text)
+* hero_description
+* hero_cta_primary_text
+* hero_cta_secondary_text
+* hero_image
+
+**Slices** (in order based on Figma):
+
+1. **StatsSlice**
+2. **ServicesPreviewSlice**
+3. **AccordionServicesSlice**
+4. **WhyChooseUsSlice**
+5. **TestimonialsSlice**
+6. **ContactFormSlice**
+7. **FooterSlice** (global, single instance)
+
+---
+
+### **2) About (Singleton)**
+
+Slices:
+
+* AboutIntroSlice
+* ValuesSlice
+* StrengthsSlice
+* WhyChooseUsSlice
+* CTASectionSlice
+
+---
+
+### **3) Services (Collection)**
+
+Repeatable type for each service such as:
+
+* SEO
+* Social Media Management
+* Digital Marketing
+
+Fields:
+
+* title
+* hero_image
+* short_description
+* long_description
+* featured_list[]
+* workflow_steps[]
+* benefits[]
+* gallery_images[]
+
+Slices:
+
+* ProcessSlice
+* CaseStudyPreviewSlice
+* GalleryImagesSlice
+* CTASectionSlice
+
+---
+
+### **4) Blogs (Repeatable)**
+
+Fields:
+
+* title
+* slug
+* category
+* author
+* cover_image
+* summary
+* content (Rich Text)
+* published_date
+
+---
+
+### **5) Case Studies (Repeatable)**
+
+Fields:
+
+* title
+* client_name
+* challenge
+* solution
+* results[] (list)
+* gallery_images[]
+* testimonial_text
+* testimonial_author
+
+---
+
+### **6) Pricing (Singleton)**
+
+Slices:
+
+* PricingTableSlice (3 tiers)
+* FAQSlice
+* CTASlice
+
+---
+
+### **7) Global Settings (Singleton)**
+
+Includes reusable settings such as:
+
+* Navigation items
+* Footer info
+* Social links
+* Agency contact info
+
+---
+
+# **4.2 Slices (Reusable Components)**
+
+Slices allow your marketing team to rearrange website sections.
+
+Your website requires these slices:
+
+### **Core Slices**
+
+| Slice Name             | Used On Pages                            | Purpose                             |
+| ---------------------- | ---------------------------------------- | ----------------------------------- |
+| HeroSlice              | Home, Services, About, Digital Marketing | Page top section                    |
+| StatsSlice             | Home                                     | Metrics display                     |
+| ServicesPreviewSlice   | Home                                     | Display 3–6 services                |
+| AccordionServicesSlice | Home                                     | Accordion with service descriptions |
+| WhyChooseUsSlice       | Home, About                              | Value propositions                  |
+| TestimonialsSlice      | Home                                     | Client testimonials                 |
+| ContactFormSlice       | Home                                     | Lead form                           |
+| PricingTableSlice      | Pricing                                  | Pricing cards                       |
+| FAQSlice               | Pricing                                  | Accordion FAQs                      |
+| CaseStudyPreviewSlice  | Digital Marketing, Home                  | Teaser for case studies             |
+| GallerySlice           | Case Study                               | Image gallery                       |
+| CTASectionSlice        | Many pages                               | Call to action block                |
+| ValuesSlice            | About                                    | Company values                      |
+| StrengthsSlice         | About                                    | Feature cards                       |
+
+Next.js components are auto-generated via Slice Machine.
+
+---
+
+# **5. Page-by-Page PRD**
+
+Below is the **detailed functional breakdown**, fully aligned with Figma.
+
+---
+
+# **5.1 HOME PAGE** (Prismic: Single Type)
+
+### **Hero Section**
+
+* Title (from Prismic)
+* Subtext
+* 2 CTA buttons (text + URLs)
+* Right-side illustration (Prismic image field)
+
+### **Stats Section**
+
+Editable fields:
+
+* Stat title
+* Stat number
+* Icon
+
+### **Services Preview**
+
+* Fetch services from Prismic (limit: 6)
+* Display title, short description, icon
+
+### **Accordion Section**
+
+* CMS-controlled accordion items
+
+### **Why Choose Us**
+
+* Icon
+* Title
+* Description
+
+### **Testimonials**
+
+* Name
+* Company
+* Quote
+* Avatar
+
+### **Lead Capture Form**
+
+* Name
+* Email
+* Message
+* POST to Next.js API `/api/contact`
+
+---
+
+# **5.2 SERVICES LIST PAGE**
+
+Pulled from Prismic “Service” documents:
+
+* Icon
+* Title
+* Short Description
+* CTA link (dynamic route `/services/[uid]`)
+
+---
+
+# **5.3 SERVICE DETAIL PAGE**
+
+Fields:
+
+* Hero image
+* Service description
+* Key features
+* Workflow steps (01, 02, 03…)
+* Benefits
+* Gallery images
+* CTA button
+
+---
+
+# **5.4 ABOUT US PAGE**
+
+Slices:
+
+* Intro
+* Brand Values
+* Strengths
+* Why Choose Us
+* CTA
+
+---
+
+# **5.5 BLOGS PAGE**
+
+Functionality:
+
+* Fetch all blogs
+* Pagination (Prismic supports paginated queries)
+* Category filter
+* Search bar (client local filter, not CMS-based)
+
+Blog Card:
+
+* Cover image
+* Category
+* Title
+* Summary
+* Author
+
+---
+
+# **5.6 BLOG SINGLE PAGE**
+
+Fields:
+
+* Hero banner image
+* Title
+* Meta info
+* Blog content (Rich Text → HTML serialization)
+* Next/Previous blog links
+* Recommended blogs
+
+---
+
+# **5.7 PRICING PAGE**
+
+Slices:
+
+* PricingTableSlice
+
+  * plan name
+  * price
+  * feature list
+  * CTA
+* FAQSlice
+* CTASectionSlice
+
+---
+
+# **5.8 CASE STUDY PAGE**
+
+Fields:
+
+* Client overview
+* Challenge
+* Solution
+* Results
+* Gallery images
+* Testimonial
+
+---
+
+# **6. Functional Requirements**
+
+### **6.1 CMS Integration**
+
+* Fully dynamic content
+* All texts editable through Prismic
+* No hardcoded content except layout
+
+### **6.2 Image Handling**
+
+* Use Prismic Image field
+* Render via Next.js `<Image />`
+
+### **6.3 Contact Form**
+
+* POST → Next.js route handler
+* SPAM protection via hidden honey-pot or hCaptcha
+
+### **6.4 SEO**
+
+* Dynamic metadata per Prismic page
+* `generateMetadata()` in each route
+* OpenGraph images
+* Sitemap from `next-sitemap`
+
+---
+
+# **7. Performance Requirements**
+
+* Pre-render via **Static Generation** where possible
+* Revalidate using Prismic webhooks → ISR
+* Target Lighthouse scores:
+
+  * Performance: 90+
+  * Accessibility: 95+
+  * SEO: 100
+
+---
+
+# **8. Next.js Architecture**
+
+```
+/app
+  /components
+    /slices
+  /services
+  /blogs
+  /case-studies
+  /pricing
+  /about
+  /api
+  /_prismic.ts   ← client for Prismic
+  /layout.tsx
+  /globals.css
+```
+
+Uses:
+
+* **Server Components** for main pages
+* **Client Components** only for:
+
+  * Accordion
+  * Slider
+  * Search bar
+  * Contact form
+
+---
+
+# **9. Deliverables**
+
+* Fully developed Next.js application
+* Prismic repository with schema
+* Slice Machine components
+* CI/CD via Vercel
+* Documentation on:
+
+  * Updating slices
+  * Adding new blogs/services
+  * Deployment
+
+---
+
+# **10. Timeline**
+
+| Phase                | Duration       |
+| -------------------- | -------------- |
+| Slice Machine Setup  | 2 days         |
+| CMS Modeling & API   | 3 days         |
+| Page Development     | 10–12 days     |
+| Form + SEO           | 2 days         |
+| Testing + Deployment | 3 days         |
+| **Total**            | **20–22 days** |
+
