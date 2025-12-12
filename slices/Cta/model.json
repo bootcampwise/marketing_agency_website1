@@ -1,0 +1,48 @@
+{
+    "id": "cta",
+    "type": "SharedSlice",
+    "name": "Cta",
+    "description": "Call to action section",
+    "variations": [
+        {
+            "id": "default",
+            "name": "Default",
+            "docURL": "...",
+            "version": "initial",
+            "description": "Default",
+            "imageUrl": "",
+            "primary": {
+                "heading": {
+                    "type": "Text",
+                    "config": {
+                        "label": "Heading",
+                        "placeholder": "Enter CTA heading"
+                    }
+                },
+                "description": {
+                    "type": "Text",
+                    "config": {
+                        "label": "Description",
+                        "placeholder": "Enter CTA description"
+                    }
+                },
+                "button_text": {
+                    "type": "Text",
+                    "config": {
+                        "label": "Button Text",
+                        "placeholder": "Enter button text"
+                    }
+                },
+                "cta_image": {
+                    "type": "Image",
+                    "config": {
+                        "label": "CTA Image",
+                        "constraint": {},
+                        "thumbnails": []
+                    }
+                }
+            },
+            "items": {}
+        }
+    ]
+}

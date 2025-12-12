@@ -1,0 +1,33 @@
+{
+    "id": "pricing_hero",
+    "type": "SharedSlice",
+    "name": "PricingHero",
+    "description": "Pricing page hero section",
+    "variations": [
+        {
+            "id": "default",
+            "name": "Default",
+            "docURL": "...",
+            "version": "initial",
+            "description": "Default",
+            "imageUrl": "",
+            "primary": {
+                "heading": {
+                    "type": "Text",
+                    "config": {
+                        "label": "Heading",
+                        "placeholder": "Designed for business teams like yours"
+                    }
+                },
+                "description": {
+                    "type": "Text",
+                    "config": {
+                        "label": "Description",
+                        "placeholder": "Here at Positivus we focus on markets..."
+                    }
+                }
+            },
+            "items": {}
+        }
+    ]
+}

@@ -1,0 +1,49 @@
+{
+    "id": "service_category",
+    "type": "SharedSlice",
+    "name": "ServiceCategory",
+    "description": "Service category section with title, description, features list, and image",
+    "variations": [
+        {
+            "id": "default",
+            "name": "Default",
+            "docURL": "...",
+            "version": "initial",
+            "description": "Default",
+            "imageUrl": "",
+            "primary": {
+                "category_title": {
+                    "type": "Text",
+                    "config": {
+                        "label": "Category Title",
+                        "placeholder": "Strategy"
+                    }
+                },
+                "description": {
+                    "type": "Text",
+                    "config": {
+                        "label": "Description",
+                        "placeholder": "We design and develop meaningful strategies..."
+                    }
+                },
+                "category_image": {
+                    "type": "Image",
+                    "config": {
+                        "label": "Category Image",
+                        "constraint": {},
+                        "thumbnails": []
+                    }
+                }
+            },
+            "items": {
+                "feature": {
+                    "type": "Text",
+                    "config": {
+                        "label": "Feature",
+                        "placeholder": "Business consulting"
+                    }
+                }
+            }
+        }
+    ]
+}

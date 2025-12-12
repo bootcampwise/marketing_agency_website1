@@ -1,0 +1,72 @@
+{
+    "id": "about_hero",
+    "type": "SharedSlice",
+    "name": "AboutHero",
+    "description": "About page hero section",
+    "variations": [
+        {
+            "id": "default",
+            "name": "Default",
+            "docURL": "...",
+            "version": "initial",
+            "description": "Default",
+            "imageUrl": "",
+            "primary": {
+                "heading": {
+                    "type": "Text",
+                    "config": {
+                        "label": "Heading",
+                        "placeholder": "We Navigate the digital landscape for success"
+                    }
+                },
+                "description": {
+                    "type": "Text",
+                    "config": {
+                        "label": "Description",
+                        "placeholder": "Our digital marketing agency helps businesses grow and succeed online..."
+                    }
+                },
+                "button_text": {
+                    "type": "Text",
+                    "config": {
+                        "label": "Button Text",
+                        "placeholder": "Book a consultation"
+                    }
+                },
+                "button_link": {
+                    "type": "Link",
+                    "config": {
+                        "label": "Button Link",
+                        "placeholder": "#contact"
+                    }
+                },
+                "show_client_logos": {
+                    "type": "Boolean",
+                    "config": {
+                        "label": "Show Client Logos",
+                        "default_value": true,
+                        "placeholder_true": "Yes",
+                        "placeholder_false": "No"
+                    }
+                }
+            },
+            "items": {
+                "logo": {
+                    "type": "Image",
+                    "config": {
+                        "label": "Client Logo",
+                        "constraint": {},
+                        "thumbnails": []
+                    }
+                },
+                "logo_alt": {
+                    "type": "Text",
+                    "config": {
+                        "label": "Logo Alt Text",
+                        "placeholder": "Company name"
+                    }
+                }
+            }
+        }
+    ]
+}

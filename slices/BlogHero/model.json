@@ -1,0 +1,42 @@
+{
+    "id": "blog_hero",
+    "type": "SharedSlice",
+    "name": "BlogHero",
+    "description": "Blog page hero section with heading and search",
+    "variations": [
+        {
+            "id": "default",
+            "name": "Default",
+            "docURL": "...",
+            "version": "initial",
+            "description": "Default",
+            "imageUrl": "",
+            "primary": {
+                "heading": {
+                    "type": "Text",
+                    "config": {
+                        "label": "Heading",
+                        "placeholder": "Our Blog"
+                    }
+                },
+                "description": {
+                    "type": "Text",
+                    "config": {
+                        "label": "Description",
+                        "placeholder": "We use an agile approach..."
+                    }
+                },
+                "show_search": {
+                    "type": "Boolean",
+                    "config": {
+                        "label": "Show Search Bar",
+                        "default_value": true,
+                        "placeholder_true": "Yes",
+                        "placeholder_false": "No"
+                    }
+                }
+            },
+            "items": {}
+        }
+    ]
+}

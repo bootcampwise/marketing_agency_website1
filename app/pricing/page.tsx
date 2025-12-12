@@ -1,77 +1,64 @@
-import PricingCard from '@/components/PricingCard'
+import { Metadata } from "next";
+import { SliceZone } from "@prismicio/react";
+import { createClient } from "@/prismicio";
+import { components } from "@/slices";
 
-export default function PricingPage() {
-    const pricingTiers = [
-        {
-            tier: 'Starter',
-            description: 'Best option for personal use & for your individual business',
-            price: 29,
-            features: [
-                'Individual configuration',
-                'No setup, or hidden fees',
-                'Team size: 1 developer',
-                'Premium support: 6 months',
-                'Free updates: 6 months',
-            ],
-            isPopular: false,
-        },
-        {
-            tier: 'Company',
-            description: 'Relevant for multiple users, extended & premium support',
-            price: 99,
-            features: [
-                'Individual configuration',
-                'No setup, or hidden fees',
-                'Team size: 10 developers',
-                'Premium support: 24 months',
-                'Free updates: 24 months',
-            ],
-            isPopular: true,
-        },
-        {
-            tier: 'Enterprise',
-            description: 'Best for large scale uses and extended redistribution rights',
-            price: 499,
-            features: [
-                'Individual configuration',
-                'No setup, or hidden fees',
-                'Team size: 100+ developers',
-                'Premium support: 36 months',
-                'Free updates: 36 months',
-            ],
-            isPopular: false,
-        },
-    ]
+export default async function PricingPage() {
+    const client = createClient();
 
-    return (
-        <div>
-            {/* Hero Section */}
-            <section className="container mx-auto px-4 lg:px-8 py-16 lg:py-20">
-                <div className="max-w-3xl mx-auto text-center mb-12">
-                    <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-                        Designed for business teams like yours
-                    </h1>
-                    <p className="text-base lg:text-lg text-gray-600 leading-relaxed">
-                        Here at Positivus we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.
+    try {
+        const page = await client.getSingle("pricing_page");
+
+        return (
+            <div>
+                <SliceZone slices={page.data.slices} components={components} />
+            </div>
+        );
+    } catch (error) {
+        console.error("Error fetching pricing page from Prismic:", error);
+
+        return (
+            <div className="container mx-auto px-4 lg:px-8 py-16">
+                <div className="bg-yellow-50 border-2 border-yellow-400 rounded-lg p-8">
+                    <h2 className="text-2xl font-bold mb-4 text-yellow-800">
+                        ⚠️ Pricing Page Not Found in Prismic
+                    </h2>
+                    <p className="mb-4 text-yellow-700">
+                        The pricing page document hasn't been created in Prismic yet. Please follow these steps:
                     </p>
+                    <ol className="list-decimal list-inside space-y-2 text-yellow-700">
+                        <li>Open Slice Machine (if not running, run: <code className="bg-yellow-100 px-2 py-1 rounded">npm run slicemachine</code>)</li>
+                        <li>Push your custom types and slices to Prismic</li>
+                        <li>Go to your Prismic dashboard</li>
+                        <li>Create a new "Pricing Page" document</li>
+                        <li>Add PricingHero and PricingTiers slices</li>
+                        <li>Publish the document</li>
+                    </ol>
                 </div>
-            </section>
+            </div>
+        );
+    }
+}
 
-            {/* Pricing Tiers Grid */}
-            <section className="container mx-auto px-4 lg:px-8 pb-16">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {pricingTiers.map((tier, index) => (
-                        <PricingCard
-                            key={index}
-                            tier={tier.tier}
-                            description={tier.description}
-                            price={tier.price}
-                            features={tier.features}
-                            isPopular={tier.isPopular}
-                        />
-                    ))}
-                </div>
-            </section>
-        </div>
-    )
+export async function generateMetadata(): Promise<Metadata> {
+    const client = createClient();
+
+    try {
+        const page = await client.getSingle("pricing_page");
+
+        return {
+            title: (page.data.meta_title as string) || "Pricing - Positivus Digital Marketing",
+            description: (page.data.meta_description as string) || "Choose the perfect plan for your business needs",
+            openGraph: {
+                title: (page.data.meta_title as string) || "Pricing - Positivus Digital Marketing",
+                description: (page.data.meta_description as string) || "Choose the perfect plan for your business",
+                images: page.data.meta_image?.url ? [page.data.meta_image.url] : [],
+            },
+        };
+    } catch (error) {
+        return {
+            title: "Pricing - Positivus Digital Marketing",
+            description: "Choose the perfect plan for your business needs",
+        };
+    }
 }

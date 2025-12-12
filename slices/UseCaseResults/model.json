@@ -1,0 +1,42 @@
+{
+    "id": "use_case_results",
+    "type": "SharedSlice",
+    "name": "UseCaseResults",
+    "description": "Use case results section",
+    "variations": [
+        {
+            "id": "default",
+            "name": "Default",
+            "docURL": "...",
+            "version": "initial",
+            "description": "Default",
+            "imageUrl": "",
+            "primary": {
+                "heading": {
+                    "type": "Text",
+                    "config": {
+                        "label": "Heading",
+                        "placeholder": "The Results"
+                    }
+                },
+                "pattern_image": {
+                    "type": "Image",
+                    "config": {
+                        "label": "Pattern Image",
+                        "constraint": {},
+                        "thumbnails": []
+                    }
+                }
+            },
+            "items": {
+                "result_text": {
+                    "type": "Text",
+                    "config": {
+                        "label": "Result Text",
+                        "placeholder": "Increased referring domains by 2,500%"
+                    }
+                }
+            }
+        }
+    ]
+}

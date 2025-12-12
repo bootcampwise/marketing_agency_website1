@@ -1,0 +1,77 @@
+{
+    "id": "services",
+    "type": "SharedSlice",
+    "name": "Services",
+    "description": "Services section with service cards",
+    "variations": [
+        {
+            "id": "default",
+            "name": "Default",
+            "docURL": "...",
+            "version": "initial",
+            "description": "Default",
+            "imageUrl": "",
+            "primary": {
+                "heading": {
+                    "type": "Text",
+                    "config": {
+                        "label": "Heading",
+                        "placeholder": "Services"
+                    }
+                },
+                "description": {
+                    "type": "Text",
+                    "config": {
+                        "label": "Description",
+                        "placeholder": "Enter services description"
+                    }
+                }
+            },
+            "items": {
+                "title_line_1": {
+                    "type": "Text",
+                    "config": {
+                        "label": "Title Line 1",
+                        "placeholder": "First line of service title"
+                    }
+                },
+                "title_line_2": {
+                    "type": "Text",
+                    "config": {
+                        "label": "Title Line 2",
+                        "placeholder": "Second line of service title"
+                    }
+                },
+                "service_image": {
+                    "type": "Image",
+                    "config": {
+                        "label": "Service Image",
+                        "constraint": {},
+                        "thumbnails": []
+                    }
+                },
+                "background_color": {
+                    "type": "Text",
+                    "config": {
+                        "label": "Background Color",
+                        "placeholder": "bg-gray-light, bg-primary, or bg-dark"
+                    }
+                },
+                "text_color": {
+                    "type": "Text",
+                    "config": {
+                        "label": "Text Color",
+                        "placeholder": "text-dark or text-white"
+                    }
+                },
+                "title_background_color": {
+                    "type": "Text",
+                    "config": {
+                        "label": "Title Background Color",
+                        "placeholder": "bg-primary or bg-white"
+                    }
+                }
+            }
+        }
+    ]
+}

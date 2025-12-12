@@ -1,0 +1,41 @@
+{
+    "id": "use_case_challenge",
+    "type": "SharedSlice",
+    "name": "UseCaseChallenge",
+    "description": "Use case challenge section",
+    "variations": [
+        {
+            "id": "default",
+            "name": "Default",
+            "docURL": "...",
+            "version": "initial",
+            "description": "Default",
+            "imageUrl": "",
+            "primary": {
+                "heading": {
+                    "type": "Text",
+                    "config": {
+                        "label": "Heading",
+                        "placeholder": "The Challenge"
+                    }
+                },
+                "description": {
+                    "type": "Text",
+                    "config": {
+                        "label": "Description",
+                        "placeholder": "In October 2020..."
+                    }
+                },
+                "pattern_image": {
+                    "type": "Image",
+                    "config": {
+                        "label": "Pattern Image",
+                        "constraint": {},
+                        "thumbnails": []
+                    }
+                }
+            },
+            "items": {}
+        }
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "id": "service_icons",
+    "type": "SharedSlice",
+    "name": "ServiceIcons",
+    "description": "Service icons grid with title",
+    "variations": [
+        {
+            "id": "default",
+            "name": "Default",
+            "docURL": "...",
+            "version": "initial",
+            "description": "Default",
+            "imageUrl": "",
+            "primary": {
+                "section_title": {
+                    "type": "Text",
+                    "config": {
+                        "label": "Section Title",
+                        "placeholder": "Digital marketing services"
+                    }
+                }
+            },
+            "items": {
+                "icon_image": {
+                    "type": "Image",
+                    "config": {
+                        "label": "Icon Image",
+                        "constraint": {},
+                        "thumbnails": []
+                    }
+                },
+                "icon_label": {
+                    "type": "Text",
+                    "config": {
+                        "label": "Icon Label",
+                        "placeholder": "Strategy"
+                    }
+                }
+            }
+        }
+    ]
+}

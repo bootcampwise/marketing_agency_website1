@@ -1,0 +1,41 @@
+{
+    "id": "use_case_impact",
+    "type": "SharedSlice",
+    "name": "UseCaseImpact",
+    "description": "Use case impact section (gray box)",
+    "variations": [
+        {
+            "id": "default",
+            "name": "Default",
+            "docURL": "...",
+            "version": "initial",
+            "description": "Default",
+            "imageUrl": "",
+            "primary": {
+                "heading": {
+                    "type": "Text",
+                    "config": {
+                        "label": "Heading",
+                        "placeholder": "The Impact"
+                    }
+                },
+                "description": {
+                    "type": "Text",
+                    "config": {
+                        "label": "Description",
+                        "placeholder": "When we partnered with..."
+                    }
+                },
+                "pattern_image": {
+                    "type": "Image",
+                    "config": {
+                        "label": "Pattern Image",
+                        "constraint": {},
+                        "thumbnails": []
+                    }
+                }
+            },
+            "items": {}
+        }
+    ]
+}

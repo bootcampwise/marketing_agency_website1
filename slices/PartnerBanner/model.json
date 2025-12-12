@@ -1,0 +1,55 @@
+{
+    "id": "partner_banner",
+    "type": "SharedSlice",
+    "name": "PartnerBanner",
+    "description": "Partner promotion banner with dark background",
+    "variations": [
+        {
+            "id": "default",
+            "name": "Default",
+            "docURL": "...",
+            "version": "initial",
+            "description": "Default",
+            "imageUrl": "",
+            "primary": {
+                "message_line1": {
+                    "type": "Text",
+                    "config": {
+                        "label": "Message Line 1",
+                        "placeholder": "For social media marketing"
+                    }
+                },
+                "message_line2": {
+                    "type": "Text",
+                    "config": {
+                        "label": "Message Line 2",
+                        "placeholder": "connect with our partner"
+                    }
+                },
+                "partner_name": {
+                    "type": "Text",
+                    "config": {
+                        "label": "Partner Name",
+                        "placeholder": "LiKEable"
+                    }
+                },
+                "partner_link": {
+                    "type": "Text",
+                    "config": {
+                        "label": "Partner Link",
+                        "placeholder": "https://partner.com"
+                    }
+                },
+                "logo": {
+                    "type": "Image",
+                    "config": {
+                        "label": "Partner Logo",
+                        "constraint": {},
+                        "thumbnails": []
+                    }
+                }
+            },
+            "items": {}
+        }
+    ]
+}

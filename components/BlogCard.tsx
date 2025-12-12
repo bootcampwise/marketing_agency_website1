@@ -22,8 +22,8 @@ export default function BlogCard({
 }: BlogCardProps) {
     return (
         <div
-            className="bg-white border-2 border-dark rounded-3xl p-6 transition-all flex flex-col"
-            style={{ boxShadow: '0px 8px 0px 0px rgba(0, 0, 0, 1)', width: '612px' }}
+            className="bg-white border-2 border-dark rounded-3xl p-4 sm:p-6 transition-all flex flex-col w-full max-w-[612px] mx-auto"
+            style={{ boxShadow: '0px 8px 0px 0px rgba(0, 0, 0, 1)' }}
         >
             {/* Header: Badge and Date */}
             <div className="flex items-center justify-between mb-4">
@@ -49,10 +49,10 @@ export default function BlogCard({
             </div>
 
             {/* Title */}
-            <h3 className="text-xl font-bold mb-3">{title}</h3>
+            <h3 className="text-lg sm:text-xl font-bold mb-3">{title}</h3>
 
             {/* Excerpt */}
-            <p className="text-gray-text mb-6 line-clamp-3 flex-grow" style={{ fontSize: '16px' }}>{excerpt}</p>
+            <p className="text-gray-text mb-6 line-clamp-3 flex-grow text-sm sm:text-base">{excerpt}</p>
 
             {/* Footer: Author and Read More */}
             <div className="flex items-center justify-between pt-4 border-t border-gray-200">

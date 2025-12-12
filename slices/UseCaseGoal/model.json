@@ -1,0 +1,33 @@
+{
+    "id": "use_case_goal",
+    "type": "SharedSlice",
+    "name": "UseCaseGoal",
+    "description": "Use case goal section",
+    "variations": [
+        {
+            "id": "default",
+            "name": "Default",
+            "docURL": "...",
+            "version": "initial",
+            "description": "Default",
+            "imageUrl": "",
+            "primary": {
+                "heading": {
+                    "type": "Text",
+                    "config": {
+                        "label": "Heading",
+                        "placeholder": "The Goal"
+                    }
+                },
+                "description": {
+                    "type": "Text",
+                    "config": {
+                        "label": "Description",
+                        "placeholder": "Build a successful SEO strategy..."
+                    }
+                }
+            },
+            "items": {}
+        }
+    ]
+}

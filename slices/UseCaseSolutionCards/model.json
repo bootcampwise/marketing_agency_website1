@@ -1,0 +1,45 @@
+{
+    "id": "use_case_solution_cards",
+    "type": "SharedSlice",
+    "name": "UseCaseSolutionCards",
+    "description": "Use case solution cards grid (4 cards)",
+    "variations": [
+        {
+            "id": "default",
+            "name": "Default",
+            "docURL": "...",
+            "version": "initial",
+            "description": "Default",
+            "imageUrl": "",
+            "primary": {},
+            "items": {
+                "card_icon": {
+                    "type": "Image",
+                    "config": {
+                        "label": "Card Icon",
+                        "constraint": {},
+                        "thumbnails": []
+                    }
+                },
+                "card_text": {
+                    "type": "Text",
+                    "config": {
+                        "label": "Card Text",
+                        "placeholder": "Create more than 70 content pieces..."
+                    }
+                },
+                "card_background": {
+                    "type": "Select",
+                    "config": {
+                        "label": "Card Background Color",
+                        "placeholder": "Select background",
+                        "options": [
+                            "Green",
+                            "Gray"
+                        ]
+                    }
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "id": "use_case_hero",
+    "type": "SharedSlice",
+    "name": "UseCaseHero",
+    "description": "Use case hero section with logo and headings",
+    "variations": [
+        {
+            "id": "default",
+            "name": "Default",
+            "docURL": "...",
+            "version": "initial",
+            "description": "Default",
+            "imageUrl": "",
+            "primary": {
+                "company_logo": {
+                    "type": "Image",
+                    "config": {
+                        "label": "Company Logo",
+                        "constraint": {},
+                        "thumbnails": []
+                    }
+                },
+                "subheading": {
+                    "type": "Text",
+                    "config": {
+                        "label": "Subheading",
+                        "placeholder": "Easily Partners with HawkSEM..."
+                    }
+                },
+                "heading": {
+                    "type": "Text",
+                    "config": {
+                        "label": "Heading",
+                        "placeholder": "CAPITAL-AS-A-SERVICE FUNDING..."
+                    }
+                },
+                "description": {
+                    "type": "Text",
+                    "config": {
+                        "label": "Description",
+                        "placeholder": "Company description..."
+                    }
+                }
+            },
+            "items": {}
+        }
+    ]
+}

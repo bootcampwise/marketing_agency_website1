@@ -1,0 +1,41 @@
+{
+    "id": "contact",
+    "type": "SharedSlice",
+    "name": "Contact",
+    "description": "Contact form section",
+    "variations": [
+        {
+            "id": "default",
+            "name": "Default",
+            "docURL": "...",
+            "version": "initial",
+            "description": "Default",
+            "imageUrl": "",
+            "primary": {
+                "heading": {
+                    "type": "Text",
+                    "config": {
+                        "label": "Heading",
+                        "placeholder": "Contact Us"
+                    }
+                },
+                "description": {
+                    "type": "Text",
+                    "config": {
+                        "label": "Description",
+                        "placeholder": "Enter description"
+                    }
+                },
+                "contact_image": {
+                    "type": "Image",
+                    "config": {
+                        "label": "Contact Image",
+                        "constraint": {},
+                        "thumbnails": []
+                    }
+                }
+            },
+            "items": {}
+        }
+    ]
+}

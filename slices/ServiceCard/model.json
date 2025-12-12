@@ -1,0 +1,92 @@
+{
+    "id": "service_card",
+    "type": "SharedSlice",
+    "name": "ServiceCard",
+    "description": "Individual service card with details and benefits",
+    "variations": [
+        {
+            "id": "default",
+            "name": "Default",
+            "docURL": "...",
+            "version": "initial",
+            "description": "Default",
+            "imageUrl": "",
+            "primary": {
+                "badge_text_line1": {
+                    "type": "Text",
+                    "config": {
+                        "label": "Badge Text Line 1",
+                        "placeholder": "Search Engine"
+                    }
+                },
+                "badge_text_line2": {
+                    "type": "Text",
+                    "config": {
+                        "label": "Badge Text Line 2",
+                        "placeholder": "Optimization"
+                    }
+                },
+                "illustration": {
+                    "type": "Image",
+                    "config": {
+                        "label": "Service Illustration",
+                        "constraint": {},
+                        "thumbnails": []
+                    }
+                },
+                "what_we_offer": {
+                    "type": "Text",
+                    "config": {
+                        "label": "What We Offer",
+                        "placeholder": "Describe what this service offers"
+                    }
+                },
+                "cta_text": {
+                    "type": "Text",
+                    "config": {
+                        "label": "CTA Button Text",
+                        "placeholder": "Get Started"
+                    }
+                },
+                "cta_link": {
+                    "type": "Text",
+                    "config": {
+                        "label": "CTA Link",
+                        "placeholder": "#service"
+                    }
+                },
+                "bg_color": {
+                    "type": "Select",
+                    "config": {
+                        "label": "Background Color",
+                        "placeholder": "Select background color",
+                        "options": [
+                            "gray",
+                            "green",
+                            "dark",
+                            "light"
+                        ]
+                    }
+                },
+                "has_wrapper": {
+                    "type": "Boolean",
+                    "config": {
+                        "label": "Has Background Wrapper",
+                        "placeholder_false": "No wrapper",
+                        "placeholder_true": "With wrapper",
+                        "default_value": false
+                    }
+                }
+            },
+            "items": {
+                "benefit": {
+                    "type": "Text",
+                    "config": {
+                        "label": "Benefit",
+                        "placeholder": "Enter a benefit"
+                    }
+                }
+            }
+        }
+    ]
+}

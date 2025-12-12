@@ -1,114 +1,67 @@
-import BlogCard from '@/components/BlogCard'
+import { Metadata } from "next";
+import { SliceZone } from "@prismicio/react";
+import { createClient } from "@/prismicio";
+import { components } from "@/slices";
 
-export default function BlogsPage() {
-    const blogPosts = [
-        {
-            title: 'How to quickly deploy a static website',
-            excerpt: 'Static websites are now used to bootstrap lots of websites and are becoming the basis for a variety of tools that even influence both web designers and developers influence both web designers and developers.',
-            author: 'Jese Leos',
-            logo: '/blog-icon-1.png',
-            date: 'January 20, 2024',
-            badgeType: 'Tutorial' as const,
-            slug: 'building-static-website',
-        },
-        {
-            title: 'Our first project with Astro',
-            excerpt: 'In the ever-evolving world of mobile technology, Samsung has consistently delivered cutting-edge devices that redefine the way we experience the digital world.',
-            author: 'Bonnie Green',
-            logo: '/blog-icon-2.png',
-            date: 'January 17, 2025',
-            badgeType: 'Article' as const,
-            slug: 'first-project-astro',
-        },
-        {
-            title: "Capturing Life's Moments with Canon Excellence",
-            excerpt: 'Consider human a growth of masterwork in the food of privelkeding by including their value-based life. Clean one has a value.',
-            author: 'Bonnie Green',
-            logo: '/blog-icon-3.png',
-            date: 'January 15, 2024',
-            badgeType: 'Article' as const,
-            slug: 'canva-pro-moments',
-        },
-        {
-            title: 'Unleash Creativity With These Cutting-Edge Tablets',
-            excerpt: 'In the world of digital creativity, tablets have become indispensable tools for artists, designers, and anyone seeking to unleash their artistic potential.',
-            author: 'Bonnie Green',
-            logo: '/blog-icon-4.png',
-            date: 'January 14, 2024',
-            badgeType: 'Article' as const,
-            slug: 'sketch-accessibility-tablets',
-        },
-        {
-            title: 'Guardian of the Digital Realm: Web Security',
-            excerpt: "In today's interconnected world, where data breaches and cyber threats are on the rise, web security has become paramount. As the guardians of the digital realm...",
-            author: 'Jese Leos',
-            logo: '/blog-icon-5.png',
-            date: 'January 14, 2024',
-            badgeType: 'Tutorial' as const,
-            slug: 'web-security-guardian',
-        },
-    ]
+export default async function BlogsPage() {
+    const client = createClient();
 
-    return (
-        <div>
-            {/* Hero Section */}
-            <section className="container mx-auto px-4 lg:px-8 py-16 lg:py-20">
-                <div className="max-w-3xl mx-auto text-center mb-10">
-                    <h1 className="text-4xl lg:text-5xl font-bold mb-6">Our Blog</h1>
-                    <p className="text-base lg:text-lg text-gray-600 leading-relaxed">
-                        We use an agile approach to test assumptions and connect with the needs of your audience early and often.
+    try {
+        const page = await client.getSingle("blog_page");
+
+        return (
+            <div>
+                <SliceZone slices={page.data.slices} components={components} />
+            </div>
+        );
+    } catch (error) {
+        console.error("Error fetching blog page from Prismic:", error);
+
+        return (
+            <div className="container mx-auto px-4 lg:px-8 py-16">
+                <div className="bg-yellow-50 border-2 border-yellow-400 rounded-lg p-8">
+                    <h2 className="text-2xl font-bold mb-4 text-yellow-800">
+                        ⚠️ Blog Page Not Found in Prismic
+                    </h2>
+                    <p className="mb-4 text-yellow-700">
+                        The blog page document hasn't been created in Prismic yet. Please follow these steps:
+                    </p>
+                    <ol className="list-decimal list-inside space-y-2 text-yellow-700">
+                        <li>Open Slice Machine (if not running, run: <code className="bg-yellow-100 px-2 py-1 rounded">npm run slicemachine</code>)</li>
+                        <li>Push your custom types and slices to Prismic</li>
+                        <li>Go to your Prismic dashboard</li>
+                        <li>Create a new "Blog Page" document</li>
+                        <li>Add BlogHero and BlogPosts slices</li>
+                        <li>Publish the document</li>
+                    </ol>
+                    <p className="mt-4 text-sm text-yellow-600">
+                        Check the <code className="bg-yellow-100 px-2 py-1 rounded">BLOG_PAGE_SETUP_GUIDE.md</code> file for detailed instructions.
                     </p>
                 </div>
+            </div>
+        );
+    }
+}
 
-                {/* Search Bar */}
-                <form className="w-full mb-10">
-                    <div className="flex items-center gap-2">
-                        <input
-                            type="text"
-                            placeholder="Search articles..."
-                            className="flex-1 px-6 py-3 border-2 border-dark rounded-lg outline-none text-sm bg-white"
-                        />
-                        <button
-                            type="submit"
-                            className="bg-dark text-white p-3 rounded-lg hover:bg-primary hover:text-dark transition-colors flex items-center justify-center border-2 border-dark"
-                            aria-label="Search"
-                        >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="h-5 w-5"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth={2}
-                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                                />
-                            </svg>
-                        </button>
-                    </div>
-                </form>
-            </section>
+export async function generateMetadata(): Promise<Metadata> {
+    const client = createClient();
 
-            {/* Blog Posts Grid */}
-            <section className="container mx-auto px-4 lg:px-8 pb-16">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {blogPosts.map((post, index) => (
-                        <BlogCard
-                            key={index}
-                            title={post.title}
-                            excerpt={post.excerpt}
-                            author={post.author}
-                            logo={post.logo}
-                            date={post.date}
-                            badgeType={post.badgeType}
-                            slug={post.slug}
-                        />
-                    ))}
-                </div>
-            </section>
-        </div>
-    )
+    try {
+        const page = await client.getSingle("blog_page");
+
+        return {
+            title: (page.data.meta_title as string) || "Our Blog - Positivus Digital Marketing",
+            description: (page.data.meta_description as string) || "Read our latest articles and tutorials on digital marketing",
+            openGraph: {
+                title: (page.data.meta_title as string) || "Our Blog - Positivus Digital Marketing",
+                description: (page.data.meta_description as string) || "Read our latest articles and tutorials",
+                images: page.data.meta_image?.url ? [page.data.meta_image.url] : [],
+            },
+        };
+    } catch (error) {
+        return {
+            title: "Our Blog - Positivus Digital Marketing",
+            description: "Read our latest articles and tutorials on digital marketing",
+        };
+    }
 }
