@@ -1,42 +1,42 @@
 {
-    "id": "blog_post_content",
-    "type": "SharedSlice",
-    "name": "BlogPostContent",
-    "description": "Content section for blog post with numbered sections",
-    "variations": [
-        {
-            "id": "default",
-            "name": "Default",
-            "docURL": "...",
-            "version": "initial",
-            "description": "Default",
-            "imageUrl": "",
-            "primary": {},
-            "items": {
-                "section_number": {
-                    "type": "Text",
-                    "config": {
-                        "label": "Section Number",
-                        "placeholder": "1"
-                    }
-                },
-                "section_title": {
-                    "type": "Text",
-                    "config": {
-                        "label": "Section Title",
-                        "placeholder": "Authentication and Authorization"
-                    }
-                },
-                "section_content": {
-                    "type": "StructuredText",
-                    "config": {
-                        "label": "Section Content",
-                        "placeholder": "Write the section content...",
-                        "allowTargetBlank": true,
-                        "multi": "paragraph,strong,em,hyperlink,list-item,o-list-item"
-                    }
-                }
-            }
+  "id": "blog_post_content",
+  "type": "SharedSlice",
+  "name": "BlogPostContent",
+  "description": "Content section for blog post with numbered sections",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {},
+      "items": {
+        "section_number": {
+          "type": "Text",
+          "config": {
+            "label": "Section Number",
+            "placeholder": "1"
+          }
+        },
+        "section_title": {
+          "type": "Text",
+          "config": {
+            "label": "Section Title",
+            "placeholder": "Authentication and Authorization"
+          }
+        },
+        "section_content": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Section Content",
+            "placeholder": "Write the section content...",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em,hyperlink,list-item,o-list-item"
+          }
         }
-    ]
+      }
+    }
+  ]
 }

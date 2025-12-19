@@ -1,65 +1,65 @@
 {
-    "id": "blog_post_hero",
-    "type": "SharedSlice",
-    "name": "BlogPostHero",
-    "description": "Hero section for blog post with title, metadata, tags, and featured image",
-    "variations": [
-        {
-            "id": "default",
-            "name": "Default",
-            "docURL": "...",
-            "version": "initial",
-            "description": "Default",
-            "imageUrl": "",
-            "primary": {
-                "title": {
-                    "type": "Text",
-                    "config": {
-                        "label": "Title",
-                        "placeholder": "Guardian of the Digital Realm: Web Security"
-                    }
-                },
-                "author": {
-                    "type": "Text",
-                    "config": {
-                        "label": "Author Name",
-                        "placeholder": "Jane Lore"
-                    }
-                },
-                "publish_date": {
-                    "type": "Date",
-                    "config": {
-                        "label": "Publish Date",
-                        "placeholder": "Select date"
-                    }
-                },
-                "featured_image": {
-                    "type": "Image",
-                    "config": {
-                        "label": "Featured Image",
-                        "constraint": {},
-                        "thumbnails": []
-                    }
-                },
-                "introduction": {
-                    "type": "StructuredText",
-                    "config": {
-                        "label": "Introduction Paragraph",
-                        "placeholder": "Write the introduction paragraph...",
-                        "allowTargetBlank": true,
-                        "multi": "paragraph,strong,em,hyperlink"
-                    }
-                }
-            },
-            "items": {
-                "tag": {
-                    "type": "Text",
-                    "config": {
-                        "label": "Tag",
-                        "placeholder": "Code"
-                    }
-                }
-            }
+  "id": "blog_post_hero",
+  "type": "SharedSlice",
+  "name": "BlogPostHero",
+  "description": "Hero section for blog post with title, metadata, tags, and featured image",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": "Guardian of the Digital Realm: Web Security"
+          }
+        },
+        "author": {
+          "type": "Text",
+          "config": {
+            "label": "Author Name",
+            "placeholder": "Jane Lore"
+          }
+        },
+        "publish_date": {
+          "type": "Date",
+          "config": {
+            "label": "Publish Date",
+            "placeholder": "Select date"
+          }
+        },
+        "featured_image": {
+          "type": "Image",
+          "config": {
+            "label": "Featured Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "introduction": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Introduction Paragraph",
+            "placeholder": "Write the introduction paragraph...",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em,hyperlink"
+          }
         }
-    ]
+      },
+      "items": {
+        "tag": {
+          "type": "Text",
+          "config": {
+            "label": "Tag",
+            "placeholder": "Code"
+          }
+        }
+      }
+    }
+  ]
 }

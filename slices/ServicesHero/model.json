@@ -1,33 +1,33 @@
 {
-    "id": "services_hero",
-    "type": "SharedSlice",
-    "name": "ServicesHero",
-    "description": "Hero section for services page with title and description",
-    "variations": [
-        {
-            "id": "default",
-            "name": "Default",
-            "docURL": "...",
-            "version": "initial",
-            "description": "Default",
-            "imageUrl": "",
-            "primary": {
-                "title": {
-                    "type": "Text",
-                    "config": {
-                        "label": "Title",
-                        "placeholder": "Our Services"
-                    }
-                },
-                "description": {
-                    "type": "Text",
-                    "config": {
-                        "label": "Description",
-                        "placeholder": "Enter services page description"
-                    }
-                }
-            },
-            "items": {}
+  "id": "services_hero",
+  "type": "SharedSlice",
+  "name": "ServicesHero",
+  "description": "Hero section for services page with title and description",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": "Our Services"
+          }
+        },
+        "description": {
+          "type": "Text",
+          "config": {
+            "label": "Description",
+            "placeholder": "Enter services page description"
+          }
         }
-    ]
+      },
+      "items": {}
+    }
+  ]
 }

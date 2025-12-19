@@ -1,43 +1,43 @@
 {
-    "id": "philosophy_banner",
-    "type": "SharedSlice",
-    "name": "PhilosophyBanner",
-    "description": "Philosophy banner with green bar and dark content section",
-    "variations": [
-        {
-            "id": "default",
-            "name": "Default",
-            "docURL": "...",
-            "version": "initial",
-            "description": "Default",
-            "imageUrl": "",
-            "primary": {
-                "heading": {
-                    "type": "StructuredText",
-                    "config": {
-                        "label": "Heading",
-                        "placeholder": "Tech + Human Empathy = Creativity",
-                        "allowTargetBlank": false,
-                        "multi": "strong,em"
-                    }
-                },
-                "description": {
-                    "type": "Text",
-                    "config": {
-                        "label": "Description",
-                        "placeholder": "We leverage our deep understanding..."
-                    }
-                }
-            },
-            "items": {
-                "nav_item": {
-                    "type": "Text",
-                    "config": {
-                        "label": "Navigation Item",
-                        "placeholder": "SERVICES"
-                    }
-                }
-            }
+  "id": "philosophy_banner",
+  "type": "SharedSlice",
+  "name": "PhilosophyBanner",
+  "description": "Philosophy banner with green bar and dark content section",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Heading",
+            "placeholder": "Tech + Human Empathy = Creativity",
+            "allowTargetBlank": false,
+            "multi": "strong,em"
+          }
+        },
+        "description": {
+          "type": "Text",
+          "config": {
+            "label": "Description",
+            "placeholder": "We leverage our deep understanding..."
+          }
         }
-    ]
+      },
+      "items": {
+        "nav_item": {
+          "type": "Text",
+          "config": {
+            "label": "Navigation Item",
+            "placeholder": "SERVICES"
+          }
+        }
+      }
+    }
+  ]
 }

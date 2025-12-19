@@ -1,72 +1,72 @@
 {
-    "id": "use_cases_page",
-    "label": "Use Cases Page",
-    "format": "page",
-    "repeatable": false,
-    "status": true,
-    "json": {
-        "Main": {
-            "uid": {
-                "type": "UID",
-                "config": {
-                    "label": "UID",
-                    "placeholder": "use-cases"
-                }
-            },
-            "meta_title": {
-                "type": "Text",
-                "config": {
-                    "label": "Meta Title",
-                    "placeholder": "Use Cases - Positivus Digital Marketing"
-                }
-            },
-            "meta_description": {
-                "type": "Text",
-                "config": {
-                    "label": "Meta Description",
-                    "placeholder": "See how we've helped businesses succeed"
-                }
-            },
-            "meta_image": {
-                "type": "Image",
-                "config": {
-                    "label": "Meta Image",
-                    "constraint": {},
-                    "thumbnails": []
-                }
-            },
-            "slices": {
-                "type": "Slices",
-                "fieldset": "Slice Zone",
-                "config": {
-                    "choices": {
-                        "use_case_hero": {
-                            "type": "SharedSlice"
-                        },
-                        "use_case_goal": {
-                            "type": "SharedSlice"
-                        },
-                        "use_case_challenge": {
-                            "type": "SharedSlice"
-                        },
-                        "use_case_results": {
-                            "type": "SharedSlice"
-                        },
-                        "use_case_solution_cards": {
-                            "type": "SharedSlice"
-                        },
-                        "use_case_solution": {
-                            "type": "SharedSlice"
-                        },
-                        "use_case_impact": {
-                            "type": "SharedSlice"
-                        },
-                        "cta": {
-                            "type": "SharedSlice"
-                        }
-                    }
-                }
-            }
+  "id": "use_cases_page",
+  "label": "Use Cases Page",
+  "format": "page",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "UID",
+          "placeholder": "use-cases"
         }
+      },
+      "meta_title": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "Use Cases - Positivus Digital Marketing"
+        }
+      },
+      "meta_description": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "See how we've helped businesses succeed"
+        }
+      },
+      "meta_image": {
+        "type": "Image",
+        "config": {
+          "label": "Meta Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "use_case_hero": {
+              "type": "SharedSlice"
+            },
+            "use_case_goal": {
+              "type": "SharedSlice"
+            },
+            "use_case_challenge": {
+              "type": "SharedSlice"
+            },
+            "use_case_results": {
+              "type": "SharedSlice"
+            },
+            "use_case_solution_cards": {
+              "type": "SharedSlice"
+            },
+            "use_case_solution": {
+              "type": "SharedSlice"
+            },
+            "use_case_impact": {
+              "type": "SharedSlice"
+            },
+            "cta": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
     }
+  }
 }

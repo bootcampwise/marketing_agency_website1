@@ -1,47 +1,47 @@
 {
-    "id": "services_cta",
-    "type": "SharedSlice",
-    "name": "ServicesCta",
-    "description": "Call-to-action section for services page",
-    "variations": [
-        {
-            "id": "default",
-            "name": "Default",
-            "docURL": "...",
-            "version": "initial",
-            "description": "Default",
-            "imageUrl": "",
-            "primary": {
-                "heading": {
-                    "type": "Text",
-                    "config": {
-                        "label": "Heading",
-                        "placeholder": "Ready to transform your digital presence?"
-                    }
-                },
-                "description": {
-                    "type": "Text",
-                    "config": {
-                        "label": "Description",
-                        "placeholder": "Enter CTA description"
-                    }
-                },
-                "button_text": {
-                    "type": "Text",
-                    "config": {
-                        "label": "Button Text",
-                        "placeholder": "Get in touch"
-                    }
-                },
-                "button_link": {
-                    "type": "Text",
-                    "config": {
-                        "label": "Button Link",
-                        "placeholder": "/contact"
-                    }
-                }
-            },
-            "items": {}
+  "id": "services_cta",
+  "type": "SharedSlice",
+  "name": "ServicesCta",
+  "description": "Call-to-action section for services page",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "Text",
+          "config": {
+            "label": "Heading",
+            "placeholder": "Ready to transform your digital presence?"
+          }
+        },
+        "description": {
+          "type": "Text",
+          "config": {
+            "label": "Description",
+            "placeholder": "Enter CTA description"
+          }
+        },
+        "button_text": {
+          "type": "Text",
+          "config": {
+            "label": "Button Text",
+            "placeholder": "Get in touch"
+          }
+        },
+        "button_link": {
+          "type": "Text",
+          "config": {
+            "label": "Button Link",
+            "placeholder": "/contact"
+          }
         }
-    ]
+      },
+      "items": {}
+    }
+  ]
 }

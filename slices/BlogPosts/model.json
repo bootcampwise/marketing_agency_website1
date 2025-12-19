@@ -1,73 +1,70 @@
 {
-    "id": "blog_posts",
-    "type": "SharedSlice",
-    "name": "BlogPosts",
-    "description": "Blog posts grid section",
-    "variations": [
-        {
-            "id": "default",
-            "name": "Default",
-            "docURL": "...",
-            "version": "initial",
-            "description": "Default",
-            "imageUrl": "",
-            "primary": {},
-            "items": {
-                "title": {
-                    "type": "Text",
-                    "config": {
-                        "label": "Title",
-                        "placeholder": "Blog post title"
-                    }
-                },
-                "excerpt": {
-                    "type": "Text",
-                    "config": {
-                        "label": "Excerpt",
-                        "placeholder": "Short description"
-                    }
-                },
-                "author": {
-                    "type": "Text",
-                    "config": {
-                        "label": "Author",
-                        "placeholder": "Author name"
-                    }
-                },
-                "author_image": {
-                    "type": "Image",
-                    "config": {
-                        "label": "Author Image",
-                        "constraint": {},
-                        "thumbnails": []
-                    }
-                },
-                "date": {
-                    "type": "Text",
-                    "config": {
-                        "label": "Date",
-                        "placeholder": "January 20, 2024"
-                    }
-                },
-                "badge_type": {
-                    "type": "Select",
-                    "config": {
-                        "label": "Badge Type",
-                        "placeholder": "Select type",
-                        "options": [
-                            "Tutorial",
-                            "Article"
-                        ]
-                    }
-                },
-                "slug": {
-                    "type": "Text",
-                    "config": {
-                        "label": "Slug",
-                        "placeholder": "blog-post-slug"
-                    }
-                }
-            }
+  "id": "blog_posts",
+  "type": "SharedSlice",
+  "name": "BlogPosts",
+  "description": "Blog posts grid section",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {},
+      "items": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": "Blog post title"
+          }
+        },
+        "excerpt": {
+          "type": "Text",
+          "config": {
+            "label": "Excerpt",
+            "placeholder": "Short description"
+          }
+        },
+        "author": {
+          "type": "Text",
+          "config": {
+            "label": "Author",
+            "placeholder": "Author name"
+          }
+        },
+        "author_image": {
+          "type": "Image",
+          "config": {
+            "label": "Author Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "date": {
+          "type": "Text",
+          "config": {
+            "label": "Date",
+            "placeholder": "January 20, 2024"
+          }
+        },
+        "badge_type": {
+          "type": "Select",
+          "config": {
+            "label": "Badge Type",
+            "placeholder": "Select type",
+            "options": ["Tutorial", "Article"]
+          }
+        },
+        "slug": {
+          "type": "Text",
+          "config": {
+            "label": "Slug",
+            "placeholder": "blog-post-slug"
+          }
         }
-    ]
+      }
+    }
+  ]
 }

@@ -1,54 +1,54 @@
 {
-    "id": "blog_post",
-    "label": "Blog Post",
-    "format": "page",
-    "repeatable": true,
-    "status": true,
-    "json": {
-        "Main": {
-            "uid": {
-                "type": "UID",
-                "config": {
-                    "label": "UID",
-                    "placeholder": "my-blog-post-slug"
-                }
-            },
-            "meta_title": {
-                "type": "Text",
-                "config": {
-                    "label": "Meta Title",
-                    "placeholder": "SEO title for this blog post"
-                }
-            },
-            "meta_description": {
-                "type": "Text",
-                "config": {
-                    "label": "Meta Description",
-                    "placeholder": "SEO description for this blog post"
-                }
-            },
-            "meta_image": {
-                "type": "Image",
-                "config": {
-                    "label": "Meta Image (OG Image)",
-                    "constraint": {},
-                    "thumbnails": []
-                }
-            },
-            "slices": {
-                "type": "Slices",
-                "fieldset": "Slice Zone",
-                "config": {
-                    "choices": {
-                        "blog_post_hero": {
-                            "type": "SharedSlice"
-                        },
-                        "blog_post_content": {
-                            "type": "SharedSlice"
-                        }
-                    }
-                }
-            }
+  "id": "blog_post",
+  "label": "Blog Post",
+  "format": "page",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "UID",
+          "placeholder": "my-blog-post-slug"
         }
+      },
+      "meta_title": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "SEO title for this blog post"
+        }
+      },
+      "meta_description": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "SEO description for this blog post"
+        }
+      },
+      "meta_image": {
+        "type": "Image",
+        "config": {
+          "label": "Meta Image (OG Image)",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "blog_post_hero": {
+              "type": "SharedSlice"
+            },
+            "blog_post_content": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
     }
+  }
 }

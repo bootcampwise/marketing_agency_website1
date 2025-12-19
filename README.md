@@ -5,6 +5,7 @@ A modern, fully responsive marketing agency website built with Next.js (frontend
 ## 🎯 Project Overview
 
 This website demonstrates a complete marketing agency digital presence with:
+
 - 8 fully functional pages
 - Responsive design (mobile-first approach)
 - Modern UI with consistent design system
@@ -14,6 +15,7 @@ This website demonstrates a complete marketing agency digital presence with:
 ## ✨ Features
 
 ### Pages
+
 - **Home**: Hero section, services overview, case studies, team, testimonials, contact form
 - **Services**: Detailed grid layout of all 6 services (SEO, PPC, Social Media, Email, Content, Analytics)
 - **Service Detail**: Dynamic pages for individual services
@@ -24,6 +26,7 @@ This website demonstrates a complete marketing agency digital presence with:
 - **Use Cases**: Real success stories with metrics
 
 ### Technical Features
+
 - ✅ Fully responsive design
 - ✅ 9 reusable components (Header, Footer, Cards)
 - ✅ Zero console logs (production-ready)
@@ -35,6 +38,7 @@ This website demonstrates a complete marketing agency digital presence with:
 ## 🛠️ Tech Stack
 
 ### Frontend
+
 - **Framework**: Next.js 14.0.4
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
@@ -42,6 +46,7 @@ This website demonstrates a complete marketing agency digital presence with:
 - **CMS**: Prismic (optional)
 
 ### Backend
+
 - **Runtime**: Node.js
 - **Framework**: Express.js
 - **Database**: MongoDB (with Mongoose)
@@ -85,6 +90,7 @@ marketing_agency/
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - Node.js (v18 or higher)
 - npm or yarn
 - MongoDB (for backend)
@@ -92,18 +98,21 @@ marketing_agency/
 ### Installation
 
 1. **Clone the repository**
+
 ```bash
 git clone <your-repo-url>
 cd marketing_agency
 ```
 
 2. **Install Frontend Dependencies**
+
 ```bash
 cd frontend
 npm install
 ```
 
 3. **Install Backend Dependencies**
+
 ```bash
 cd ../backend
 npm install
@@ -114,11 +123,13 @@ npm install
 Create `.env` files in both frontend and backend directories:
 
 **Frontend** (`frontend/.env.local`):
+
 ```env
 NEXT_PUBLIC_API_URL=http://localhost:5000
 ```
 
 **Backend** (`backend/.env`):
+
 ```env
 PORT=5000
 MONGODB_URI=your_mongodb_connection_string
@@ -130,18 +141,21 @@ JWT_SECRET=your_jwt_secret
 **Development Mode**:
 
 1. **Start Backend** (Terminal 1):
+
 ```bash
 cd backend
 npm start
 ```
 
 2. **Start Frontend** (Terminal 2):
+
 ```bash
 cd frontend
 npm run dev
 ```
 
 3. **Access the website**:
+
 - Frontend: http://localhost:3000
 - Backend API: http://localhost:5000
 
@@ -161,16 +175,19 @@ npm start
 ## 🎨 Design System
 
 ### Colors
+
 - **Primary**: `#B9FF66` (Lime Green)
 - **Dark**: `#191A23` (Near Black)
 - **Gray Light**: `#F3F3F3`
 - **Gray Text**: `#787878`
 
 ### Typography
+
 - **Primary Font**: Space Grotesk
 - **Secondary Font**: Montserrat
 
 ### Breakpoints
+
 - **Mobile**: < 768px
 - **Tablet**: 768px - 1024px
 - **Desktop**: > 1024px
@@ -187,6 +204,7 @@ npm start
 ## 🧪 Testing
 
 Browser testing has been performed on:
+
 - Homepage (all sections verified)
 - Services page (all 6 services)
 - Navigation and links
@@ -196,6 +214,7 @@ Browser testing has been performed on:
 ## 📝 Requirements Compliance
 
 This project is **100% compliant** with `requirements.txt`:
+
 - ✅ All 8 required pages implemented
 - ✅ Fully responsive design
 - ✅ Reusable components (header, footer, cards)

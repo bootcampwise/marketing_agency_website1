@@ -1,55 +1,55 @@
 {
-    "id": "testimonials",
-    "type": "SharedSlice",
-    "name": "Testimonials",
-    "description": "Testimonials carousel section",
-    "variations": [
-        {
-            "id": "default",
-            "name": "Default",
-            "docURL": "...",
-            "version": "initial",
-            "description": "Default",
-            "imageUrl": "",
-            "primary": {
-                "heading": {
-                    "type": "Text",
-                    "config": {
-                        "label": "Heading",
-                        "placeholder": "Testimonials"
-                    }
-                },
-                "description": {
-                    "type": "Text",
-                    "config": {
-                        "label": "Description",
-                        "placeholder": "Enter description"
-                    }
-                }
-            },
-            "items": {
-                "quote": {
-                    "type": "Text",
-                    "config": {
-                        "label": "Quote",
-                        "placeholder": "Enter testimonial quote"
-                    }
-                },
-                "author": {
-                    "type": "Text",
-                    "config": {
-                        "label": "Author",
-                        "placeholder": "Author name"
-                    }
-                },
-                "position": {
-                    "type": "Text",
-                    "config": {
-                        "label": "Position",
-                        "placeholder": "Author position"
-                    }
-                }
-            }
+  "id": "testimonials",
+  "type": "SharedSlice",
+  "name": "Testimonials",
+  "description": "Testimonials carousel section",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "Text",
+          "config": {
+            "label": "Heading",
+            "placeholder": "Testimonials"
+          }
+        },
+        "description": {
+          "type": "Text",
+          "config": {
+            "label": "Description",
+            "placeholder": "Enter description"
+          }
         }
-    ]
+      },
+      "items": {
+        "quote": {
+          "type": "Text",
+          "config": {
+            "label": "Quote",
+            "placeholder": "Enter testimonial quote"
+          }
+        },
+        "author": {
+          "type": "Text",
+          "config": {
+            "label": "Author",
+            "placeholder": "Author name"
+          }
+        },
+        "position": {
+          "type": "Text",
+          "config": {
+            "label": "Position",
+            "placeholder": "Author position"
+          }
+        }
+      }
+    }
+  ]
 }

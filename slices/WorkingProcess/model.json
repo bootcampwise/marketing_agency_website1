@@ -1,55 +1,55 @@
 {
-    "id": "working_process",
-    "type": "SharedSlice",
-    "name": "WorkingProcess",
-    "description": "Working process section with accordion steps",
-    "variations": [
-        {
-            "id": "default",
-            "name": "Default",
-            "docURL": "...",
-            "version": "initial",
-            "description": "Default",
-            "imageUrl": "",
-            "primary": {
-                "heading": {
-                    "type": "Text",
-                    "config": {
-                        "label": "Heading",
-                        "placeholder": "Our Working Process"
-                    }
-                },
-                "description": {
-                    "type": "Text",
-                    "config": {
-                        "label": "Description",
-                        "placeholder": "Enter description"
-                    }
-                }
-            },
-            "items": {
-                "step_number": {
-                    "type": "Text",
-                    "config": {
-                        "label": "Step Number",
-                        "placeholder": "01"
-                    }
-                },
-                "step_title": {
-                    "type": "Text",
-                    "config": {
-                        "label": "Step Title",
-                        "placeholder": "Enter step title"
-                    }
-                },
-                "step_description": {
-                    "type": "Text",
-                    "config": {
-                        "label": "Step Description",
-                        "placeholder": "Enter step description"
-                    }
-                }
-            }
+  "id": "working_process",
+  "type": "SharedSlice",
+  "name": "WorkingProcess",
+  "description": "Working process section with accordion steps",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "Text",
+          "config": {
+            "label": "Heading",
+            "placeholder": "Our Working Process"
+          }
+        },
+        "description": {
+          "type": "Text",
+          "config": {
+            "label": "Description",
+            "placeholder": "Enter description"
+          }
         }
-    ]
+      },
+      "items": {
+        "step_number": {
+          "type": "Text",
+          "config": {
+            "label": "Step Number",
+            "placeholder": "01"
+          }
+        },
+        "step_title": {
+          "type": "Text",
+          "config": {
+            "label": "Step Title",
+            "placeholder": "Enter step title"
+          }
+        },
+        "step_description": {
+          "type": "Text",
+          "config": {
+            "label": "Step Description",
+            "placeholder": "Enter step description"
+          }
+        }
+      }
+    }
+  ]
 }

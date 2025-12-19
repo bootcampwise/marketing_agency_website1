@@ -1,45 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-    body {
-        @apply bg-white text-dark;
-        font-family: 'Space Grotesk', sans-serif;
-    }
+  body {
+    @apply bg-white text-dark;
+    font-family: "Space Grotesk", sans-serif;
+  }
 }
 
 @layer components {
-    .btn-primary {
-        @apply bg-dark text-white px-8 py-4 rounded-xl font-medium hover:bg-dark/90 transition-all;
-    }
+  .btn-primary {
+    @apply bg-dark text-white px-8 py-4 rounded-xl font-medium hover:bg-dark/90 transition-all;
+  }
 
-    .btn-secondary {
-        @apply bg-primary text-dark px-8 py-4 rounded-xl font-medium hover:bg-primary/90 transition-all;
-    }
+  .btn-secondary {
+    @apply bg-primary text-dark px-8 py-4 rounded-xl font-medium hover:bg-primary/90 transition-all;
+  }
 
-    .section-heading {
-        @apply bg-primary text-dark px-2 py-1 rounded-md inline-block font-medium text-sm md:text-base;
-    }
+  .section-heading {
+    @apply bg-primary text-dark px-2 py-1 rounded-md inline-block font-medium text-sm md:text-base;
+  }
 }
 
 @layer utilities {
-    @keyframes scroll-left {
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(-50%);
-        }
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
     }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
 
-    .animate-scroll-left {
-        animation: scroll-left 20s linear infinite;
-    }
+  .animate-scroll-left {
+    animation: scroll-left 20s linear infinite;
+  }
 
-    .animate-scroll-left:hover {
-        animation-play-state: paused;
-    }
+  .animate-scroll-left:hover {
+    animation-play-state: paused;
+  }
 }

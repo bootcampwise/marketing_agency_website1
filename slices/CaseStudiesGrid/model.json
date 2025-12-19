@@ -1,62 +1,57 @@
 {
-    "id": "case_studies_grid",
-    "type": "SharedSlice",
-    "name": "CaseStudiesGrid",
-    "description": "Case studies grid with carousel",
-    "variations": [
-        {
-            "id": "default",
-            "name": "Default",
-            "docURL": "...",
-            "version": "initial",
-            "description": "Default",
-            "imageUrl": "",
-            "primary": {
-                "section_title": {
-                    "type": "Text",
-                    "config": {
-                        "label": "Section Title",
-                        "placeholder": "Digital marketing case studies"
-                    }
-                }
-            },
-            "items": {
-                "case_study_title": {
-                    "type": "Text",
-                    "config": {
-                        "label": "Case Study Title",
-                        "placeholder": "McDermott Will & Emery"
-                    }
-                },
-                "category": {
-                    "type": "Text",
-                    "config": {
-                        "label": "Category",
-                        "placeholder": "LEGAL"
-                    }
-                },
-                "background_color": {
-                    "type": "Select",
-                    "config": {
-                        "label": "Background Color",
-                        "placeholder": "Select color",
-                        "options": [
-                            "dark",
-                            "purple",
-                            "gray",
-                            "primary"
-                        ]
-                    }
-                },
-                "case_study_image": {
-                    "type": "Image",
-                    "config": {
-                        "label": "Case Study Image",
-                        "constraint": {},
-                        "thumbnails": []
-                    }
-                }
-            }
+  "id": "case_studies_grid",
+  "type": "SharedSlice",
+  "name": "CaseStudiesGrid",
+  "description": "Case studies grid with carousel",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "section_title": {
+          "type": "Text",
+          "config": {
+            "label": "Section Title",
+            "placeholder": "Digital marketing case studies"
+          }
         }
-    ]
+      },
+      "items": {
+        "case_study_title": {
+          "type": "Text",
+          "config": {
+            "label": "Case Study Title",
+            "placeholder": "McDermott Will & Emery"
+          }
+        },
+        "category": {
+          "type": "Text",
+          "config": {
+            "label": "Category",
+            "placeholder": "LEGAL"
+          }
+        },
+        "background_color": {
+          "type": "Select",
+          "config": {
+            "label": "Background Color",
+            "placeholder": "Select color",
+            "options": ["dark", "purple", "gray", "primary"]
+          }
+        },
+        "case_study_image": {
+          "type": "Image",
+          "config": {
+            "label": "Case Study Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      }
+    }
+  ]
 }

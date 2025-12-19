@@ -1,54 +1,54 @@
 {
-    "id": "blog_page",
-    "label": "Blog Page",
-    "format": "page",
-    "repeatable": false,
-    "status": true,
-    "json": {
-        "Main": {
-            "uid": {
-                "type": "UID",
-                "config": {
-                    "label": "UID",
-                    "placeholder": "blogs"
-                }
-            },
-            "meta_title": {
-                "type": "Text",
-                "config": {
-                    "label": "Meta Title",
-                    "placeholder": "Our Blog - Positivus Digital Marketing"
-                }
-            },
-            "meta_description": {
-                "type": "Text",
-                "config": {
-                    "label": "Meta Description",
-                    "placeholder": "Read our latest articles and tutorials"
-                }
-            },
-            "meta_image": {
-                "type": "Image",
-                "config": {
-                    "label": "Meta Image",
-                    "constraint": {},
-                    "thumbnails": []
-                }
-            },
-            "slices": {
-                "type": "Slices",
-                "fieldset": "Slice Zone",
-                "config": {
-                    "choices": {
-                        "blog_hero": {
-                            "type": "SharedSlice"
-                        },
-                        "blog_posts": {
-                            "type": "SharedSlice"
-                        }
-                    }
-                }
-            }
+  "id": "blog_page",
+  "label": "Blog Page",
+  "format": "page",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "UID",
+          "placeholder": "blogs"
         }
+      },
+      "meta_title": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "Our Blog - Positivus Digital Marketing"
+        }
+      },
+      "meta_description": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "Read our latest articles and tutorials"
+        }
+      },
+      "meta_image": {
+        "type": "Image",
+        "config": {
+          "label": "Meta Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "blog_hero": {
+              "type": "SharedSlice"
+            },
+            "blog_posts": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
     }
+  }
 }

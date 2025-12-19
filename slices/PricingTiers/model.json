@@ -1,56 +1,56 @@
 {
-    "id": "pricing_tiers",
-    "type": "SharedSlice",
-    "name": "PricingTiers",
-    "description": "Pricing tiers grid section",
-    "variations": [
-        {
-            "id": "default",
-            "name": "Default",
-            "docURL": "...",
-            "version": "initial",
-            "description": "Default",
-            "imageUrl": "",
-            "primary": {},
-            "items": {
-                "tier": {
-                    "type": "Text",
-                    "config": {
-                        "label": "Tier Name",
-                        "placeholder": "Starter"
-                    }
-                },
-                "description": {
-                    "type": "Text",
-                    "config": {
-                        "label": "Description",
-                        "placeholder": "Best option for personal use..."
-                    }
-                },
-                "price": {
-                    "type": "Number",
-                    "config": {
-                        "label": "Price",
-                        "placeholder": "29"
-                    }
-                },
-                "features": {
-                    "type": "Text",
-                    "config": {
-                        "label": "Features (one per line)",
-                        "placeholder": "Individual configuration\nNo setup, or hidden fees\nTeam size: 1 developer"
-                    }
-                },
-                "is_popular": {
-                    "type": "Boolean",
-                    "config": {
-                        "label": "Is Popular",
-                        "default_value": false,
-                        "placeholder_true": "Yes",
-                        "placeholder_false": "No"
-                    }
-                }
-            }
+  "id": "pricing_tiers",
+  "type": "SharedSlice",
+  "name": "PricingTiers",
+  "description": "Pricing tiers grid section",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {},
+      "items": {
+        "tier": {
+          "type": "Text",
+          "config": {
+            "label": "Tier Name",
+            "placeholder": "Starter"
+          }
+        },
+        "description": {
+          "type": "Text",
+          "config": {
+            "label": "Description",
+            "placeholder": "Best option for personal use..."
+          }
+        },
+        "price": {
+          "type": "Number",
+          "config": {
+            "label": "Price",
+            "placeholder": "29"
+          }
+        },
+        "features": {
+          "type": "Text",
+          "config": {
+            "label": "Features (one per line)",
+            "placeholder": "Individual configuration\nNo setup, or hidden fees\nTeam size: 1 developer"
+          }
+        },
+        "is_popular": {
+          "type": "Boolean",
+          "config": {
+            "label": "Is Popular",
+            "default_value": false,
+            "placeholder_true": "Yes",
+            "placeholder_false": "No"
+          }
         }
-    ]
+      }
+    }
+  ]
 }

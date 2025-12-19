@@ -1,59 +1,59 @@
 {
-    "id": "services_page",
-    "label": "Services Page",
-    "format": "page",
-    "repeatable": false,
-    "status": true,
-    "json": {
-        "Main": {
-            "uid": {
-                "type": "UID",
-                "config": {
-                    "label": "UID",
-                    "placeholder": "services"
-                }
-            },
-            "slices": {
-                "type": "Slices",
-                "fieldset": "Slice Zone",
-                "config": {
-                    "choices": {
-                        "services_hero": {
-                            "type": "SharedSlice"
-                        },
-                        "service_card": {
-                            "type": "SharedSlice"
-                        },
-                        "services_cta": {
-                            "type": "SharedSlice"
-                        }
-                    }
-                }
-            }
-        },
-        "SEO & Metadata": {
-            "meta_title": {
-                "type": "Text",
-                "config": {
-                    "label": "Meta Title",
-                    "placeholder": "Our Services - Digital Marketing Solutions"
-                }
-            },
-            "meta_description": {
-                "type": "Text",
-                "config": {
-                    "label": "Meta Description",
-                    "placeholder": "Explore our comprehensive digital marketing services"
-                }
-            },
-            "meta_image": {
-                "type": "Image",
-                "config": {
-                    "label": "Meta Image",
-                    "constraint": {},
-                    "thumbnails": []
-                }
-            }
+  "id": "services_page",
+  "label": "Services Page",
+  "format": "page",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "UID",
+          "placeholder": "services"
         }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "services_hero": {
+              "type": "SharedSlice"
+            },
+            "service_card": {
+              "type": "SharedSlice"
+            },
+            "services_cta": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    },
+    "SEO & Metadata": {
+      "meta_title": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "Our Services - Digital Marketing Solutions"
+        }
+      },
+      "meta_description": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "Explore our comprehensive digital marketing services"
+        }
+      },
+      "meta_image": {
+        "type": "Image",
+        "config": {
+          "label": "Meta Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      }
     }
+  }
 }

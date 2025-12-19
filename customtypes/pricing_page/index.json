@@ -1,54 +1,54 @@
 {
-    "id": "pricing_page",
-    "label": "Pricing Page",
-    "format": "page",
-    "repeatable": false,
-    "status": true,
-    "json": {
-        "Main": {
-            "uid": {
-                "type": "UID",
-                "config": {
-                    "label": "UID",
-                    "placeholder": "pricing"
-                }
-            },
-            "meta_title": {
-                "type": "Text",
-                "config": {
-                    "label": "Meta Title",
-                    "placeholder": "Pricing - Positivus Digital Marketing"
-                }
-            },
-            "meta_description": {
-                "type": "Text",
-                "config": {
-                    "label": "Meta Description",
-                    "placeholder": "Choose the perfect plan for your business"
-                }
-            },
-            "meta_image": {
-                "type": "Image",
-                "config": {
-                    "label": "Meta Image",
-                    "constraint": {},
-                    "thumbnails": []
-                }
-            },
-            "slices": {
-                "type": "Slices",
-                "fieldset": "Slice Zone",
-                "config": {
-                    "choices": {
-                        "pricing_hero": {
-                            "type": "SharedSlice"
-                        },
-                        "pricing_tiers": {
-                            "type": "SharedSlice"
-                        }
-                    }
-                }
-            }
+  "id": "pricing_page",
+  "label": "Pricing Page",
+  "format": "page",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "UID",
+          "placeholder": "pricing"
         }
+      },
+      "meta_title": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "Pricing - Positivus Digital Marketing"
+        }
+      },
+      "meta_description": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "Choose the perfect plan for your business"
+        }
+      },
+      "meta_image": {
+        "type": "Image",
+        "config": {
+          "label": "Meta Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "pricing_hero": {
+              "type": "SharedSlice"
+            },
+            "pricing_tiers": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
     }
+  }
 }

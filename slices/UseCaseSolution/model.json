@@ -1,41 +1,41 @@
 {
-    "id": "use_case_solution",
-    "type": "SharedSlice",
-    "name": "UseCaseSolution",
-    "description": "Use case solution section (dark box)",
-    "variations": [
-        {
-            "id": "default",
-            "name": "Default",
-            "docURL": "...",
-            "version": "initial",
-            "description": "Default",
-            "imageUrl": "",
-            "primary": {
-                "heading": {
-                    "type": "Text",
-                    "config": {
-                        "label": "Heading",
-                        "placeholder": "The Solution"
-                    }
-                },
-                "description": {
-                    "type": "Text",
-                    "config": {
-                        "label": "Description",
-                        "placeholder": "After digging into their company..."
-                    }
-                },
-                "pattern_image": {
-                    "type": "Image",
-                    "config": {
-                        "label": "Pattern Image",
-                        "constraint": {},
-                        "thumbnails": []
-                    }
-                }
-            },
-            "items": {}
+  "id": "use_case_solution",
+  "type": "SharedSlice",
+  "name": "UseCaseSolution",
+  "description": "Use case solution section (dark box)",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "Text",
+          "config": {
+            "label": "Heading",
+            "placeholder": "The Solution"
+          }
+        },
+        "description": {
+          "type": "Text",
+          "config": {
+            "label": "Description",
+            "placeholder": "After digging into their company..."
+          }
+        },
+        "pattern_image": {
+          "type": "Image",
+          "config": {
+            "label": "Pattern Image",
+            "constraint": {},
+            "thumbnails": []
+          }
         }
-    ]
+      },
+      "items": {}
+    }
+  ]
 }

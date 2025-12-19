@@ -1,55 +1,55 @@
 {
-    "id": "service_detail_hero",
-    "type": "SharedSlice",
-    "name": "ServiceDetailHero",
-    "description": "Hero section for service detail pages",
-    "variations": [
-        {
-            "id": "default",
-            "name": "Default",
-            "docURL": "...",
-            "version": "initial",
-            "description": "Default",
-            "imageUrl": "",
-            "primary": {
-                "title": {
-                    "type": "Text",
-                    "config": {
-                        "label": "Title",
-                        "placeholder": "Top Line Growth Through Enhanced Digital Presence"
-                    }
-                },
-                "description": {
-                    "type": "Text",
-                    "config": {
-                        "label": "Description",
-                        "placeholder": "Technology makes us fast. Empathy makes us human."
-                    }
-                },
-                "button_text": {
-                    "type": "Text",
-                    "config": {
-                        "label": "Button Text",
-                        "placeholder": "Let's connect"
-                    }
-                },
-                "button_link": {
-                    "type": "Text",
-                    "config": {
-                        "label": "Button Link",
-                        "placeholder": "/contact"
-                    }
-                },
-                "hero_image": {
-                    "type": "Image",
-                    "config": {
-                        "label": "Hero Image",
-                        "constraint": {},
-                        "thumbnails": []
-                    }
-                }
-            },
-            "items": {}
+  "id": "service_detail_hero",
+  "type": "SharedSlice",
+  "name": "ServiceDetailHero",
+  "description": "Hero section for service detail pages",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": "Top Line Growth Through Enhanced Digital Presence"
+          }
+        },
+        "description": {
+          "type": "Text",
+          "config": {
+            "label": "Description",
+            "placeholder": "Technology makes us fast. Empathy makes us human."
+          }
+        },
+        "button_text": {
+          "type": "Text",
+          "config": {
+            "label": "Button Text",
+            "placeholder": "Let's connect"
+          }
+        },
+        "button_link": {
+          "type": "Text",
+          "config": {
+            "label": "Button Link",
+            "placeholder": "/contact"
+          }
+        },
+        "hero_image": {
+          "type": "Image",
+          "config": {
+            "label": "Hero Image",
+            "constraint": {},
+            "thumbnails": []
+          }
         }
-    ]
+      },
+      "items": {}
+    }
+  ]
 }

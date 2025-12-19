@@ -1,41 +1,41 @@
 {
-    "id": "case_studies",
-    "type": "SharedSlice",
-    "name": "CaseStudies",
-    "description": "Case studies section",
-    "variations": [
-        {
-            "id": "default",
-            "name": "Default",
-            "docURL": "...",
-            "version": "initial",
-            "description": "Default",
-            "imageUrl": "",
-            "primary": {
-                "heading": {
-                    "type": "Text",
-                    "config": {
-                        "label": "Heading",
-                        "placeholder": "Case Studies"
-                    }
-                },
-                "description": {
-                    "type": "Text",
-                    "config": {
-                        "label": "Description",
-                        "placeholder": "Enter description"
-                    }
-                }
-            },
-            "items": {
-                "case_description": {
-                    "type": "Text",
-                    "config": {
-                        "label": "Case Description",
-                        "placeholder": "Enter case study description"
-                    }
-                }
-            }
+  "id": "case_studies",
+  "type": "SharedSlice",
+  "name": "CaseStudies",
+  "description": "Case studies section",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "Text",
+          "config": {
+            "label": "Heading",
+            "placeholder": "Case Studies"
+          }
+        },
+        "description": {
+          "type": "Text",
+          "config": {
+            "label": "Description",
+            "placeholder": "Enter description"
+          }
         }
-    ]
+      },
+      "items": {
+        "case_description": {
+          "type": "Text",
+          "config": {
+            "label": "Case Description",
+            "placeholder": "Enter case study description"
+          }
+        }
+      }
+    }
+  ]
 }

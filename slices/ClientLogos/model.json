@@ -1,35 +1,35 @@
 {
-    "id": "client_logos",
-    "type": "SharedSlice",
-    "name": "ClientLogos",
-    "description": "ClientLogos",
-    "variations": [
-        {
-            "id": "default",
-            "name": "Default",
-            "docURL": "...",
-            "version": "initial",
-            "description": "Default",
-            "imageUrl": "",
-            "primary": {
-                "heading": {
-                    "type": "Text",
-                    "config": {
-                        "label": "Heading",
-                        "placeholder": "You are in great company"
-                    }
-                }
-            },
-            "items": {
-                "logo": {
-                    "type": "Image",
-                    "config": {
-                        "label": "Client Logo",
-                        "constraint": {},
-                        "thumbnails": []
-                    }
-                }
-            }
+  "id": "client_logos",
+  "type": "SharedSlice",
+  "name": "ClientLogos",
+  "description": "ClientLogos",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "Text",
+          "config": {
+            "label": "Heading",
+            "placeholder": "You are in great company"
+          }
         }
-    ]
+      },
+      "items": {
+        "logo": {
+          "type": "Image",
+          "config": {
+            "label": "Client Logo",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      }
+    }
+  ]
 }
