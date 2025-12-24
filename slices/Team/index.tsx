@@ -3,15 +3,9 @@ import { SliceComponentProps } from "@prismicio/react";
 import Image from "next/image";
 import { getText } from "@/lib/prismicHelpers";
 
-/**
- * Props for `Team`.
- */
-export type TeamProps = SliceComponentProps<Content.TeamSlice>;
-
-/**
- * Component for "Team" Slices.
- */
-const Team = ({ slice }: TeamProps): JSX.Element => {
+const Team = ({
+  slice,
+}: SliceComponentProps<Content.TeamSlice>): JSX.Element => {
   return (
     <section
       data-slice-type={slice.slice_type}

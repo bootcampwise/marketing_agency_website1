@@ -1,3 +1,4 @@
+import { ServiceIconsProps } from "@/types";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import Image from "next/image";
@@ -9,20 +10,6 @@ import {
   RichTextField,
   Slice,
 } from "@prismicio/client";
-
-interface ServiceIconsSlice extends Slice {
-  slice_type: "service_icons";
-  variation?: string;
-  primary: {
-    section_title: KeyTextField | RichTextField;
-  };
-  items: {
-    icon_image: ImageField;
-    icon_label: KeyTextField | RichTextField;
-  }[];
-}
-
-export type ServiceIconsProps = SliceComponentProps<ServiceIconsSlice>;
 
 const ServiceIcons = ({ slice }: ServiceIconsProps): JSX.Element => {
   return (

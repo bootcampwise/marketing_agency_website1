@@ -1,16 +1,9 @@
+import { HeroProps } from "@/types";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import Image from "next/image";
 import { getText } from "@/lib/prismicHelpers";
 
-/**
- * Props for `Hero`.
- */
-export type HeroProps = SliceComponentProps<Content.HeroSlice>;
-
-/**
- * Component for "Hero" Slices.
- */
 const Hero = ({ slice }: HeroProps): JSX.Element => {
   return (
     <section
@@ -44,13 +37,11 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
         </div>
       </div>
 
-      {/* Client Logos */}
       {slice.items && slice.items.length > 0 && (
         <div className="mt-16 lg:mt-24 overflow-hidden">
           <p className="sr-only">Trusted by:</p>
           <div className="relative">
             <div className="flex animate-scroll-left">
-              {/* First set of logos */}
               {slice.items.map(
                 (item, index: number) =>
                   item.logo?.url && (
@@ -67,7 +58,6 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
                     </div>
                   ),
               )}
-              {/* Duplicate set for seamless loop */}
               {slice.items.map(
                 (item, index: number) =>
                   item.logo?.url && (

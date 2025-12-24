@@ -13,7 +13,6 @@ export default async function AboutPage() {
       client.getSingle<Content.HomepageDocument>("homepage"),
     ]);
 
-    // Extract Team and Services slices from homepage
     const teamSlice = homepage.data.slices?.find(
       (s) => s.slice_type === "team",
     );
@@ -21,7 +20,6 @@ export default async function AboutPage() {
       (s) => s.slice_type === "services",
     );
 
-    // Combine About page slices with homepage Team and Services slices
     const combinedSlices = [
       ...(aboutPage.data.slices || []),
       ...(teamSlice ? [teamSlice] : []),

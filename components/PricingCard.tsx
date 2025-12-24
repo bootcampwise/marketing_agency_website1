@@ -1,12 +1,5 @@
 import Link from "next/link";
-
-interface PricingCardProps {
-  tier: string;
-  description: string;
-  price: number;
-  features: string[];
-  isPopular?: boolean;
-}
+import { PricingCardProps } from "@/types";
 
 export default function PricingCard({
   tier,
@@ -20,13 +13,10 @@ export default function PricingCard({
       className="bg-white border-2 border-dark rounded-3xl p-8 transition-all flex flex-col"
       style={{ boxShadow: "0px 8px 0px 0px rgba(0, 0, 0, 1)" }}
     >
-      {/* Tier Name */}
       <h3 className="text-2xl font-bold mb-3">{tier}</h3>
 
-      {/* Description */}
       <p className="text-sm text-gray-text mb-6 min-h-[3rem]">{description}</p>
 
-      {/* Price */}
       <div className="mb-8">
         <div className="flex items-baseline gap-1">
           <span className="text-5xl font-bold">${price}</span>
@@ -34,7 +24,6 @@ export default function PricingCard({
         </div>
       </div>
 
-      {/* Features List */}
       <ul className="space-y-3 mb-8 flex-grow">
         {features.map((feature, index) => (
           <li key={index} className="flex items-start gap-3">
@@ -54,7 +43,6 @@ export default function PricingCard({
         ))}
       </ul>
 
-      {/* CTA Button */}
       <button className="w-full bg-primary text-dark font-semibold py-3 px-6 rounded-xl hover:bg-dark hover:text-white transition-all border-2 border-dark">
         Get Started
       </button>

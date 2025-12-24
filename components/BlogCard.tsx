@@ -1,15 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-
-interface BlogCardProps {
-  title: string;
-  excerpt: string;
-  author: string;
-  logo: string;
-  date: string;
-  badgeType?: "Tutorial" | "Article";
-  slug: string;
-}
+import { BlogCardProps } from "@/types";
 
 export default function BlogCard({
   title,
@@ -25,7 +16,6 @@ export default function BlogCard({
       className="bg-white border-2 border-dark rounded-3xl p-4 sm:p-6 transition-all flex flex-col w-full max-w-[612px] mx-auto"
       style={{ boxShadow: "0px 8px 0px 0px rgba(0, 0, 0, 1)" }}
     >
-      {/* Header: Badge and Date */}
       <div className="flex items-center justify-between mb-4">
         {badgeType && (
           <span className="inline-flex items-center gap-1 bg-primary text-dark px-3 py-1 rounded-full text-xs font-semibold">
@@ -78,15 +68,12 @@ export default function BlogCard({
         <span className="text-sm text-gray-text ml-auto">{date}</span>
       </div>
 
-      {/* Title */}
       <h3 className="text-lg sm:text-xl font-bold mb-3">{title}</h3>
 
-      {/* Excerpt */}
       <p className="text-gray-text mb-6 line-clamp-3 flex-grow text-sm sm:text-base">
         {excerpt}
       </p>
 
-      {/* Footer: Author and Read More */}
       <div className="flex items-center justify-between pt-4 border-t border-gray-200">
         <div className="flex items-center gap-2">
           <div className="w-8 h-8 rounded-full flex items-center justify-center border-2 border-dark overflow-hidden relative">

@@ -1,3 +1,4 @@
+import { CaseStudiesGridProps } from "@/types";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import Image from "next/image";
@@ -9,22 +10,6 @@ import {
   RichTextField,
   Slice,
 } from "@prismicio/client";
-
-interface CaseStudiesGridSlice extends Slice {
-  slice_type: "case_studies_grid";
-  variation?: string;
-  primary: {
-    section_title: KeyTextField | RichTextField;
-  };
-  items: {
-    background_color: KeyTextField;
-    case_study_image: ImageField;
-    case_study_title: KeyTextField | RichTextField;
-    category: KeyTextField | RichTextField;
-  }[];
-}
-
-export type CaseStudiesGridProps = SliceComponentProps<CaseStudiesGridSlice>;
 
 const CaseStudiesGrid = ({ slice }: CaseStudiesGridProps): JSX.Element => {
   const bgColorMap: Record<string, string> = {
@@ -96,7 +81,6 @@ const CaseStudiesGrid = ({ slice }: CaseStudiesGridProps): JSX.Element => {
           })}
         </div>
 
-        {/* Carousel Dots */}
         {slice.items.length > 3 && (
           <div className="flex justify-center gap-2">
             {[...Array(Math.ceil(slice.items.length / 3))].map((_, i) => (

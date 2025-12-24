@@ -1,3 +1,4 @@
+import { PricingTiersProps } from "@/types";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import PricingCard from "@/components/PricingCard";
@@ -10,26 +11,12 @@ import {
   NumberField,
 } from "@prismicio/client";
 
-interface PricingTiersSlice extends Slice {
-  slice_type: "pricing_tiers";
-  items: {
-    tier: KeyTextField;
-    description: KeyTextField;
-    price: NumberField;
-    features: KeyTextField;
-    is_popular: BooleanField;
-  }[];
-}
-
-export type PricingTiersProps = SliceComponentProps<PricingTiersSlice>;
-
 const PricingTiers = ({ slice }: PricingTiersProps): JSX.Element => {
   return (
     <section className="container mx-auto px-4 lg:px-8 pb-16">
       {slice.items && slice.items.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {slice.items.map((tier, index: number) => {
-            // Convert features string to array (split by newline)
             const featuresText = getText(tier.features) || "";
             const features = featuresText
               .split("\n")

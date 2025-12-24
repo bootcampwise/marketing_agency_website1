@@ -6,12 +6,10 @@ export default function Footer() {
     <footer className="pt-12 pb-0">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="bg-dark text-white rounded-t-3xl p-8 lg:p-12">
-          {/* Top Row - Logo, Nav Links, and Social Icons */}
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-12 gap-6">
-            {/* Logo */}
             <Link href="/" className="flex items-center gap-2">
               <Image
-                src="/footer-logo.png"
+                src="/images/footer-logo.png"
                 alt="Positivus Logo"
                 width={220}
                 height={36}
@@ -19,7 +17,6 @@ export default function Footer() {
               />
             </Link>
 
-            {/* Navigation Links */}
             <nav className="flex flex-wrap gap-6 lg:gap-8">
               <Link
                 href="/about"
@@ -53,7 +50,6 @@ export default function Footer() {
               </Link>
             </nav>
 
-            {/* Social Icons */}
             <div className="flex gap-4">
               <Link
                 href="#"
@@ -97,9 +93,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Middle Row - Contact Info and Newsletter */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-            {/* Contact Information */}
             <div className="space-y-3">
               <div>
                 <span className="bg-primary text-dark px-3 py-1 rounded font-medium text-sm">
@@ -115,7 +109,6 @@ export default function Footer() {
               </p>
             </div>
 
-            {/* Newsletter Subscription */}
             <div className="bg-[#292A32] rounded-xl p-6 lg:p-8">
               <div className="flex flex-col sm:flex-row gap-4">
                 <input
@@ -130,7 +123,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Bottom Row - Copyright and Privacy Policy */}
           <div className="pt-8 border-t border-white/20">
             <div className="flex flex-col sm:flex-row justify-start items-start sm:items-center gap-4">
               <p className="text-sm">© 2023 Positivus. All Rights Reserved.</p>

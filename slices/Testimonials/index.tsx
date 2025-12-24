@@ -5,9 +5,9 @@ import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import { getText } from "@/lib/prismicHelpers";
 
-export type TestimonialsProps = SliceComponentProps<Content.TestimonialsSlice>;
-
-export default function Testimonials({ slice }: TestimonialsProps) {
+export default function Testimonials({
+  slice,
+}: SliceComponentProps<Content.TestimonialsSlice>) {
   const items = slice.items;
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState<"left" | "right">("right");
@@ -42,7 +42,6 @@ export default function Testimonials({ slice }: TestimonialsProps) {
     setTimeout(() => setIsAnimating(false), 500);
   };
 
-  // Swipe handlers
   const onTouchStart = (e: TouchEvent) => {
     touchStartX.current = e.touches[0].clientX;
   };
@@ -80,7 +79,6 @@ export default function Testimonials({ slice }: TestimonialsProps) {
 
   return (
     <section className="container mx-auto px-4 lg:px-8 py-16">
-      {/* Heading + Description */}
       <div className="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-8 mb-12">
         <h2 className="section-heading bg-primary w-fit px-1 sm:px-2 py-0.5 sm:py-1 rounded text-3xl lg:text-4xl xl:text-5xl">
           {getText(slice.primary.heading)}
@@ -92,9 +90,7 @@ export default function Testimonials({ slice }: TestimonialsProps) {
         </p>
       </div>
 
-      {/* Carousel Wrapper */}
       <div className="bg-dark rounded-[45px] pt-12 pb-14 text-white overflow-hidden">
-        {/* Cards */}
         <div
           className="relative flex justify-center gap-8 mb-8 min-h-[330px] select-none"
           onTouchStart={onTouchStart}
@@ -110,7 +106,6 @@ export default function Testimonials({ slice }: TestimonialsProps) {
                 key={index}
                 className={`w-full max-w-[90vw] sm:max-w-[500px] lg:max-w-[620px] shrink-0 transition-all duration-500 ${getClass(offset)}`}
               >
-                {/* Bubble Card */}
                 <div className="bg-dark border border-primary rounded-[45px] p-6 lg:p-10 relative mb-8">
                   <p className="text-white text-base leading-relaxed">
                     “{getText(t.quote)}”
@@ -119,7 +114,6 @@ export default function Testimonials({ slice }: TestimonialsProps) {
                   <div className="absolute -bottom-[1px] left-10 w-8 h-8 bg-dark border-b border-r border-primary rotate-45 translate-y-1/2"></div>
                 </div>
 
-                {/* Author */}
                 <div className="pl-10">
                   <p className="text-primary font-semibold text-lg">
                     {getText(t.author)}
@@ -131,9 +125,7 @@ export default function Testimonials({ slice }: TestimonialsProps) {
           })}
         </div>
 
-        {/* Controls */}
         <div className="flex justify-center items-center gap-6 lg:gap-8 mt-4">
-          {/* Prev */}
           <button
             onClick={prev}
             disabled={isAnimating}
@@ -164,7 +156,6 @@ export default function Testimonials({ slice }: TestimonialsProps) {
             </svg>
           </button>
 
-          {/* Stars */}
           <div className="flex gap-3">
             {items.map((_, i) => (
               <button
@@ -188,7 +179,6 @@ export default function Testimonials({ slice }: TestimonialsProps) {
             ))}
           </div>
 
-          {/* Next */}
           <button
             onClick={next}
             disabled={isAnimating}

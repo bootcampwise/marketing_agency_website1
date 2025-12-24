@@ -1,19 +1,12 @@
 "use client";
 
+import { ContactProps } from "@/types";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import Image from "next/image";
 import { useState } from "react";
 import { getText } from "@/lib/prismicHelpers";
 
-/**
- * Props for `Contact`.
- */
-export type ContactProps = SliceComponentProps<Content.ContactSlice>;
-
-/**
- * Component for "Contact" Slices.
- */
 const Contact = ({ slice }: ContactProps): JSX.Element => {
   const [formData, setFormData] = useState({
     inquiryType: "hi",
@@ -24,7 +17,6 @@ const Contact = ({ slice }: ContactProps): JSX.Element => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
     console.log("Form submitted:", formData);
   };
 
@@ -47,7 +39,6 @@ const Contact = ({ slice }: ContactProps): JSX.Element => {
       <div className="bg-gray-light rounded-3xl p-6 lg:p-12 relative overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
-            {/* Radio Buttons */}
             <div className="flex items-center gap-8 mb-8">
               <label className="flex items-center gap-3 cursor-pointer group">
                 <div className="relative w-7 h-7 rounded-full border border-dark flex items-center justify-center bg-white">
@@ -133,7 +124,6 @@ const Contact = ({ slice }: ContactProps): JSX.Element => {
             </button>
           </form>
 
-          {/* Illustration - Positioned with 180px from right */}
           <div className="hidden lg:block absolute right-0 top-0 bottom-0 w-1/2 pointer-events-none -mr-[230px]">
             <div className="relative w-full h-full flex items-center justify-end">
               {slice.primary.contact_image?.url && (

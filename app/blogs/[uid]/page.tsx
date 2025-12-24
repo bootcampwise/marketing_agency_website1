@@ -36,7 +36,6 @@ export async function generateMetadata({
   try {
     const post = await client.getByUID("blog_post", params.uid);
 
-    // Extract title from BlogPostHero slice if available
     const heroSlice = post.data.slices?.find(
       (slice: Slice) => slice.slice_type === "blog_post_hero",
     ) as (Slice & { primary: { title: KeyTextField } }) | undefined;

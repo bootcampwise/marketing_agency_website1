@@ -1,19 +1,9 @@
+import { PricingHeroProps } from "@/types";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import { getText } from "@/lib/prismicHelpers";
 
 import { KeyTextField, RichTextField, Slice } from "@prismicio/client";
-
-interface PricingHeroSlice extends Slice {
-  slice_type: "pricing_hero";
-  variation: "default";
-  primary: {
-    heading: KeyTextField | RichTextField;
-    description: KeyTextField | RichTextField;
-  };
-}
-
-export type PricingHeroProps = SliceComponentProps<PricingHeroSlice>;
 
 const PricingHero = ({ slice }: PricingHeroProps): JSX.Element => {
   return (

@@ -1,3 +1,4 @@
+import { AboutHeroProps } from "@/types";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import Image from "next/image";
@@ -9,27 +10,9 @@ import {
   BooleanField,
 } from "@prismicio/client";
 
-interface AboutHeroSlice extends Slice {
-  slice_type: "about_hero";
-  variation?: string;
-  primary: {
-    heading: KeyTextField;
-    description: KeyTextField;
-    button_text: KeyTextField;
-    show_client_logos: BooleanField;
-  };
-  items: {
-    logo: ImageField;
-    logo_alt: KeyTextField;
-  }[];
-}
-
-export type AboutHeroProps = SliceComponentProps<AboutHeroSlice>;
-
 const AboutHero = ({ slice }: AboutHeroProps): JSX.Element => {
   return (
     <div>
-      {/* Hero Section */}
       <section className="container mx-auto px-4 lg:px-8 py-16 lg:py-20">
         <div className="max-w-3xl mx-auto text-center">
           <h1
@@ -56,7 +39,6 @@ const AboutHero = ({ slice }: AboutHeroProps): JSX.Element => {
         </div>
       </section>
 
-      {/* Client Logos */}
       {slice.primary.show_client_logos && slice.items.length > 0 && (
         <section className="container mx-auto px-4 lg:px-8 py-8">
           <div className="border-t border-gray-200 pt-12">

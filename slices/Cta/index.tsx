@@ -1,15 +1,11 @@
+import { CtaProps } from "@/types";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import Image from "next/image";
 import Link from "next/link";
 import { getText } from "@/lib/prismicHelpers";
 
-export type CtaProps = SliceComponentProps<Content.CtaSlice>;
-
 const Cta = ({ slice }: CtaProps): JSX.Element => {
-  // Check if there is a CTA image to determine layout
-  // Homepage uses the image (Gray Card style)
-  // Inner pages (Services, Use Cases) often don't have the image (Minimal Centered style)
   if (slice.primary.cta_image?.url) {
     return (
       <section
@@ -19,7 +15,7 @@ const Cta = ({ slice }: CtaProps): JSX.Element => {
       >
         <div
           className="bg-gray-light rounded-3xl p-8 lg:p-0 lg:px-[60px]"
-          style={{ minHeight: "347px" }} // Added minHeight for consistency
+          style={{ minHeight: "347px" }}
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full py-8 lg:py-0">
             <div className="flex flex-col items-start text-left">
@@ -49,7 +45,6 @@ const Cta = ({ slice }: CtaProps): JSX.Element => {
     );
   }
 
-  // Fallback / Minimal Style for pages without the specific CTA image
   return (
     <section
       data-slice-type={slice.slice_type}
@@ -60,7 +55,6 @@ const Cta = ({ slice }: CtaProps): JSX.Element => {
         <h2 className="text-3xl lg:text-4xl font-bold mb-6 max-w-3xl text-dark">
           {(() => {
             const heading = getText(slice.primary.heading) || "";
-            // Split by "work" or "results" (case-insensitive) to highlight them
             const parts = heading.split(/(work|results)/gi);
             return parts.map((part, i) =>
               part.toLowerCase() === "work" ||

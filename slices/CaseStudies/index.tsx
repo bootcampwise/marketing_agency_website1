@@ -1,15 +1,8 @@
+import { CaseStudiesProps } from "@/types";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import { getText } from "@/lib/prismicHelpers";
 
-/**
- * Props for `CaseStudies`.
- */
-export type CaseStudiesProps = SliceComponentProps<Content.CaseStudiesSlice>;
-
-/**
- * Component for "CaseStudies" Slices.
- */
 const CaseStudies = ({ slice }: CaseStudiesProps): JSX.Element => {
   return (
     <section

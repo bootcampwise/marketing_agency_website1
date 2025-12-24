@@ -3,22 +3,15 @@ import { SliceComponentProps } from "@prismicio/react";
 import Image from "next/image";
 import { getText } from "@/lib/prismicHelpers";
 
-/**
- * Props for `Services`.
- */
-export type ServicesProps = SliceComponentProps<Content.ServicesSlice>;
-
-/**
- * Component for "Services" Slices.
- */
-const Services = ({ slice }: ServicesProps): JSX.Element => {
+const Services = ({
+  slice,
+}: SliceComponentProps<Content.ServicesSlice>): JSX.Element => {
   return (
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
       className="container mx-auto px-4 lg:px-8 py-16"
     >
-      {/* Section Header */}
       <div className="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-8 mb-12">
         <h2 className="section-heading text-3xl lg:text-4xl xl:text-5xl bg-primary w-fit px-1 sm:px-2 py-0.5 sm:py-1 rounded">
           {getText(slice.primary.heading) || "Services"}
@@ -29,7 +22,6 @@ const Services = ({ slice }: ServicesProps): JSX.Element => {
         </p>
       </div>
 
-      {/* Service Cards Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {slice.items && slice.items.length > 0 ? (
           slice.items.map((service, index: number) => {
@@ -45,9 +37,7 @@ const Services = ({ slice }: ServicesProps): JSX.Element => {
                 className={`${bgColor} ${textColor} border-2 border-b-8 border-dark rounded-3xl p-6 lg:p-12 min-h-[280px] lg:min-h-[310px] flex flex-col`}
               >
                 <div className="flex flex-col sm:flex-row items-start justify-between gap-4 sm:gap-6 flex-1">
-                  {/* Text Content */}
                   <div className="flex flex-col justify-between h-full flex-1 w-full sm:w-auto">
-                    {/* Service Title */}
                     <div className="mb-auto">
                       <h3 className="flex flex-col items-start gap-0">
                         <span
@@ -73,7 +63,6 @@ const Services = ({ slice }: ServicesProps): JSX.Element => {
                       </h3>
                     </div>
 
-                    {/* Learn More Button */}
                     <button className="flex items-center gap-2 group mt-6 lg:mt-8">
                       {bgColor === "bg-dark" ? (
                         <>
@@ -109,7 +98,6 @@ const Services = ({ slice }: ServicesProps): JSX.Element => {
                     </button>
                   </div>
 
-                  {/* Service Image */}
                   <div className="flex-shrink-0 self-end sm:self-start">
                     {service.service_image?.url ? (
                       <Image

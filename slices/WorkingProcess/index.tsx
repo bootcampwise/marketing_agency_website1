@@ -5,16 +5,9 @@ import { SliceComponentProps } from "@prismicio/react";
 import { useState } from "react";
 import { getText } from "@/lib/prismicHelpers";
 
-/**
- * Props for `WorkingProcess`.
- */
-export type WorkingProcessProps =
-  SliceComponentProps<Content.WorkingProcessSlice>;
-
-/**
- * Component for "WorkingProcess" Slices.
- */
-const WorkingProcess = ({ slice }: WorkingProcessProps): JSX.Element => {
+const WorkingProcess = ({
+  slice,
+}: SliceComponentProps<Content.WorkingProcessSlice>): JSX.Element => {
   const [activeAccordion, setActiveAccordion] = useState<number | null>(0);
 
   return (

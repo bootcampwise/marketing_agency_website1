@@ -1,3 +1,4 @@
+import { ServiceDetailHeroProps } from "@/types";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import Image from "next/image";
@@ -10,21 +11,6 @@ import {
   RichTextField,
   Slice,
 } from "@prismicio/client";
-
-interface ServiceDetailHeroSlice extends Slice {
-  slice_type: "service_detail_hero";
-  variation?: string;
-  primary: {
-    title: KeyTextField | RichTextField;
-    description: KeyTextField | RichTextField;
-    button_text: KeyTextField;
-    button_link: KeyTextField | RichTextField;
-    hero_image: ImageField;
-  };
-}
-
-export type ServiceDetailHeroProps =
-  SliceComponentProps<ServiceDetailHeroSlice>;
 
 const ServiceDetailHero = ({ slice }: ServiceDetailHeroProps): JSX.Element => {
   return (

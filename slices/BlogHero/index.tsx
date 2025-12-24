@@ -1,3 +1,4 @@
+import { BlogHeroProps } from "@/types";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import { getText } from "@/lib/prismicHelpers";
@@ -8,18 +9,6 @@ import {
   BooleanField,
   Slice,
 } from "@prismicio/client";
-
-interface BlogHeroSlice extends Slice {
-  slice_type: "blog_hero";
-  variation: "default";
-  primary: {
-    heading: KeyTextField | RichTextField;
-    description: KeyTextField | RichTextField;
-    show_search: BooleanField;
-  };
-}
-
-export type BlogHeroProps = SliceComponentProps<BlogHeroSlice>;
 
 const BlogHero = ({ slice }: BlogHeroProps): JSX.Element => {
   return (
@@ -34,7 +23,6 @@ const BlogHero = ({ slice }: BlogHeroProps): JSX.Element => {
         </p>
       </div>
 
-      {/* Search Bar */}
       {slice.primary.show_search && (
         <form className="w-full mb-10">
           <div className="flex items-center gap-2">

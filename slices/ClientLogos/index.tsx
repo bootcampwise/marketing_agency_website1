@@ -1,3 +1,4 @@
+import { ClientLogosProps } from "@/types";
 import {
   ImageField,
   KeyTextField,
@@ -7,26 +8,6 @@ import {
 import { SliceComponentProps } from "@prismicio/react";
 import Image from "next/image";
 import { getText } from "@/lib/prismicHelpers";
-
-// Local type definition to resolve immediate build error while waiting for generator
-export type ClientLogosSliceDefaultPrimary = {
-  heading: KeyTextField;
-};
-
-export type ClientLogosSliceDefaultItem = {
-  logo: ImageField;
-};
-
-export type ClientLogosSlice = SharedSlice<
-  "client_logos",
-  SharedSliceVariation<
-    "default",
-    ClientLogosSliceDefaultPrimary,
-    ClientLogosSliceDefaultItem
-  >
->;
-
-export type ClientLogosProps = SliceComponentProps<ClientLogosSlice>;
 
 const ClientLogos = ({ slice }: ClientLogosProps): JSX.Element => {
   return (

@@ -1,3 +1,4 @@
+import { ServiceCardProps } from "@/types";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import Image from "next/image";
@@ -5,9 +6,6 @@ import Link from "next/link";
 import React from "react";
 import { getText } from "@/lib/prismicHelpers";
 
-/**
- * Props for `ServiceCard`.
- */
 import {
   KeyTextField,
   ImageField,
@@ -16,43 +14,10 @@ import {
   BooleanField,
 } from "@prismicio/client";
 
-/**
- * Props for `ServiceCard`.
- */
-interface ServiceCardSlice extends Slice {
-  slice_type: "service_card";
-  variation?: string;
-  primary: {
-    bg_color: KeyTextField;
-    has_wrapper: BooleanField;
-    badge_text_line1: KeyTextField;
-    badge_text_line2: KeyTextField;
-    cta_link: KeyTextField | RichTextField;
-    illustration: ImageField;
-    what_we_offer: KeyTextField | RichTextField;
-    cta_text: KeyTextField;
-  };
-  items: {
-    benefit: KeyTextField | RichTextField;
-  }[];
-}
-
-export type ServiceCardProps = SliceComponentProps<ServiceCardSlice>;
-
-/**
- * Component for "ServiceCard" Slices.
- *
- * This component renders a detailed service card with:
- * - Large card with badge, illustration, and CTA button
- * - Background color variations (gray, green, dark, light)
- * - Optional wrapper with background
- * - Two-column layout below with "What we offer" and "Benefits"
- */
 const ServiceCard = ({ slice }: ServiceCardProps): JSX.Element => {
   const bgColor = slice.primary.bg_color || "gray";
   const hasWrapper = slice.primary.has_wrapper || false;
 
-  // Map color names to Tailwind classes for main card background
   const bgColorMap: Record<string, string> = {
     gray: "bg-gray-50",
     green: "bg-primary",
@@ -60,7 +25,6 @@ const ServiceCard = ({ slice }: ServiceCardProps): JSX.Element => {
     light: "bg-gray-light",
   };
 
-  // Badge background colors - contrasting with main background
   const badgeBgMap: Record<string, string> = {
     gray: "bg-primary",
     green: "bg-white",
@@ -68,7 +32,6 @@ const ServiceCard = ({ slice }: ServiceCardProps): JSX.Element => {
     light: "bg-primary",
   };
 
-  // CTA button background colors
   const buttonBgMap: Record<string, string> = {
     gray: "bg-dark",
     green: "bg-dark",
@@ -76,7 +39,6 @@ const ServiceCard = ({ slice }: ServiceCardProps): JSX.Element => {
     light: "bg-dark",
   };
 
-  // CTA button text colors
   const buttonTextMap: Record<string, string> = {
     gray: "text-white",
     green: "text-white",
@@ -84,7 +46,6 @@ const ServiceCard = ({ slice }: ServiceCardProps): JSX.Element => {
     light: "text-white",
   };
 
-  // Button hover effects
   const buttonHoverMap: Record<string, string> = {
     gray: "hover:bg-gray-800",
     green: "hover:bg-gray-800",
@@ -98,7 +59,6 @@ const ServiceCard = ({ slice }: ServiceCardProps): JSX.Element => {
   const linkUrl = React.useMemo(() => {
     const link = getText(slice.primary.cta_link);
     if (!link) return "#";
-    // If it starts with / or http or #, it's already a valid path/url
     if (
       link.startsWith("/") ||
       link.startsWith("http") ||
@@ -106,8 +66,6 @@ const ServiceCard = ({ slice }: ServiceCardProps): JSX.Element => {
     ) {
       return link;
     }
-    // If it looks like a clean UID (just alphanumeric, dashes, underscores)
-    // We assume it's a service UID and prepend /services/
     if (/^[a-zA-Z0-9-_]+$/.test(link)) {
       return `/services/${link}`;
     }
@@ -116,15 +74,11 @@ const ServiceCard = ({ slice }: ServiceCardProps): JSX.Element => {
 
   const content = (
     <>
-      {/* Large Service Card */}
       <div
         className={`${bgColorMap[bgColor]} border-2 border-b-8 border-dark rounded-[45px] p-8 md:p-12 lg:p-16 relative mb-12 transition-all duration-300 hover:shadow-xl`}
       >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          {/* Left Side - Badge and Button */}
           <div className="flex flex-col justify-between h-full min-h-[200px] space-y-6">
-            {/* Badge */}
-            {/* Badge */}
             <div className="flex flex-col items-start">
               <span
                 className={`font-medium text-3xl text-dark leading-tight ${badgeBgMap[bgColor]} px-2 py-1 rounded-lg`}
@@ -138,14 +92,12 @@ const ServiceCard = ({ slice }: ServiceCardProps): JSX.Element => {
               </span>
             </div>
 
-            {/* Service Info Button */}
             <div className="mt-auto">
               <Link
                 href={linkUrl}
                 className="inline-flex items-center gap-3 group"
                 aria-label="Learn more about this service"
               >
-                {/* Circular Icon */}
                 <div className="w-10 h-10 bg-dark rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
                   <Image
                     src="/images/arrow-neon.png"
@@ -155,7 +107,6 @@ const ServiceCard = ({ slice }: ServiceCardProps): JSX.Element => {
                     className="w-6 h-6 object-contain"
                   />
                 </div>
-                {/* Text */}
                 <span
                   className={`font-medium text-base ${textColor} group-hover:underline transition-all duration-300`}
                 >
@@ -165,7 +116,6 @@ const ServiceCard = ({ slice }: ServiceCardProps): JSX.Element => {
             </div>
           </div>
 
-          {/* Right Side - Illustration */}
           <div className="flex justify-center lg:justify-end">
             {slice.primary.illustration?.url && (
               <div className="relative w-full max-w-md">
@@ -183,9 +133,7 @@ const ServiceCard = ({ slice }: ServiceCardProps): JSX.Element => {
         </div>
       </div>
 
-      {/* Content Below Card - Two Columns */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
-        {/* Left Column - What we offer */}
         <div className="space-y-6">
           <h3 className="text-2xl lg:text-3xl font-bold text-dark">
             What we offer
@@ -213,7 +161,6 @@ const ServiceCard = ({ slice }: ServiceCardProps): JSX.Element => {
           </Link>
         </div>
 
-        {/* Right Column - Benefits */}
         <div className="bg-gray-light p-8 lg:p-10 rounded-3xl shadow-sm">
           <h3 className="text-2xl lg:text-3xl font-bold text-dark mb-6 lg:mb-8">
             Benefits
