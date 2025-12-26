@@ -22,12 +22,11 @@ const ServicesCta = ({ slice }: ServicesCtaProps): JSX.Element => {
             "Contact us today to discuss your digital marketing needs and discover how our services can help your business grow and recover online."}
         </p>
 
-        <Link
-          href={getText(slice.primary.button_link) || "/contact"}
-          className="inline-block bg-dark text-white px-8 py-4 rounded-[14px] font-sans text-lg hover:bg-dark/90 transition-all duration-300"
+        <div
+          className="inline-block bg-dark text-white px-8 py-4 rounded-[14px] font-sans text-lg hover:bg-dark/90 transition-all duration-300 cursor-not-allowed opacity-70"
         >
           {getText(slice.primary.button_text) || "Get in touch"}
-        </Link>
+        </div>
       </div>
     </section>
   );

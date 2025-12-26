@@ -93,26 +93,48 @@ const ServiceCard = ({ slice }: ServiceCardProps): JSX.Element => {
             </div>
 
             <div className="mt-auto">
-              <Link
-                href={linkUrl}
-                className="inline-flex items-center gap-3 group"
-                aria-label="Learn more about this service"
-              >
-                <div className="w-10 h-10 bg-dark rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
-                  <Image
-                    src="/images/arrow-neon.png"
-                    alt="Arrow"
-                    width={24}
-                    height={24}
-                    className="w-6 h-6 object-contain"
-                  />
-                </div>
-                <span
-                  className={`font-medium text-base ${textColor} group-hover:underline transition-all duration-300`}
+              {linkUrl.includes("contact") || linkUrl.includes("Contact") ? (
+                <div
+                  className="inline-flex items-center gap-3 group cursor-not-allowed opacity-70"
+                  aria-label="Service info"
                 >
-                  Service info
-                </span>
-              </Link>
+                  <div className="w-10 h-10 bg-dark rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                    <Image
+                      src="/images/arrow-neon.png"
+                      alt="Arrow"
+                      width={24}
+                      height={24}
+                      className="w-6 h-6 object-contain"
+                    />
+                  </div>
+                  <span
+                    className={`font-medium text-base ${textColor} group-hover:underline transition-all duration-300`}
+                  >
+                    Service info
+                  </span>
+                </div>
+              ) : (
+                <Link
+                  href={linkUrl}
+                  className="inline-flex items-center gap-3 group"
+                  aria-label="Learn more about this service"
+                >
+                  <div className="w-10 h-10 bg-dark rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                    <Image
+                      src="/images/arrow-neon.png"
+                      alt="Arrow"
+                      width={24}
+                      height={24}
+                      className="w-6 h-6 object-contain"
+                    />
+                  </div>
+                  <span
+                    className={`font-medium text-base ${textColor} group-hover:underline transition-all duration-300`}
+                  >
+                    Service info
+                  </span>
+                </Link>
+              )}
             </div>
           </div>
 
@@ -141,24 +163,42 @@ const ServiceCard = ({ slice }: ServiceCardProps): JSX.Element => {
           <p className="text-base lg:text-lg text-gray-700 leading-relaxed">
             {getText(slice.primary.what_we_offer) || "Service description"}
           </p>
-          <Link
-            href={linkUrl}
-            className="inline-flex items-center gap-3 bg-primary px-8 py-4 rounded-lg font-medium text-dark hover:bg-primary/90 transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105"
-          >
-            <span>{getText(slice.primary.cta_text) || "Learn More"}</span>
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 20 20"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
+          {linkUrl.includes("contact") || linkUrl.includes("Contact") ? (
+            <div className="inline-flex items-center gap-3 bg-primary px-8 py-4 rounded-lg font-medium text-dark hover:bg-primary/90 transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105 cursor-not-allowed opacity-70">
+              <span>{getText(slice.primary.cta_text) || "Learn More"}</span>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M5 10h10M10 5l5 5-5 5" />
+              </svg>
+            </div>
+          ) : (
+            <Link
+              href={linkUrl}
+              className="inline-flex items-center gap-3 bg-primary px-8 py-4 rounded-lg font-medium text-dark hover:bg-primary/90 transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105"
             >
-              <path d="M5 10h10M10 5l5 5-5 5" />
-            </svg>
-          </Link>
+              <span>{getText(slice.primary.cta_text) || "Learn More"}</span>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M5 10h10M10 5l5 5-5 5" />
+              </svg>
+            </Link>
+          )}
         </div>
 
         <div className="bg-gray-light p-8 lg:p-10 rounded-3xl shadow-sm">

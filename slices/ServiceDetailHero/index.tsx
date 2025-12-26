@@ -27,14 +27,20 @@ const ServiceDetailHero = ({ slice }: ServiceDetailHeroProps): JSX.Element => {
           <p className="text-lg text-gray-600 mb-8 max-w-lg">
             {getText(slice.primary.description) || "Service description"}
           </p>
-          {slice.primary.button_text && (
-            <Link
-              href={getText(slice.primary.button_link) || "#"}
-              className="border-2 border-dark px-8 py-3 rounded-lg font-medium hover:bg-dark hover:text-white transition-colors inline-block"
-            >
-              {getText(slice.primary.button_text)}
-            </Link>
-          )}
+          {slice.primary.button_text &&
+            ((getText(slice.primary.button_link) || "#").includes("contact") ||
+              (getText(slice.primary.button_link) || "#").includes("Contact") ? (
+              <div className="border-2 border-dark px-8 py-3 rounded-lg font-medium hover:bg-dark hover:text-white transition-colors inline-block cursor-not-allowed opacity-70">
+                {getText(slice.primary.button_text)}
+              </div>
+            ) : (
+              <Link
+                href={getText(slice.primary.button_link) || "#"}
+                className="border-2 border-dark px-8 py-3 rounded-lg font-medium hover:bg-dark hover:text-white transition-colors inline-block"
+              >
+                {getText(slice.primary.button_text)}
+              </Link>
+            ))}
         </div>
         <div className="flex justify-center lg:justify-end">
           {slice.primary.hero_image?.url && (

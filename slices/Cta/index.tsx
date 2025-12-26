@@ -25,7 +25,7 @@ const Cta = ({ slice }: CtaProps): JSX.Element => {
               <p className="text-lg mb-8 max-w-md">
                 {getText(slice.primary.description)}
               </p>
-              <Link href="/contact" className="btn-primary inline-block">
+              <Link href="#" className="btn-primary inline-block">
                 {getText(slice.primary.button_text)}
               </Link>
             </div>
@@ -58,7 +58,7 @@ const Cta = ({ slice }: CtaProps): JSX.Element => {
             const parts = heading.split(/(work|results)/gi);
             return parts.map((part, i) =>
               part.toLowerCase() === "work" ||
-              part.toLowerCase() === "results" ? (
+                part.toLowerCase() === "results" ? (
                 <span key={i} className="text-primary">
                   {part}
                 </span>
@@ -74,7 +74,7 @@ const Cta = ({ slice }: CtaProps): JSX.Element => {
         </p>
 
         <Link
-          href="/contact"
+          href="#"
           className="inline-block bg-dark text-white border border-dark px-8 py-4 rounded-[14px] font-sans text-lg hover:bg-primary hover:border-primary hover:text-dark transition-all duration-300"
         >
           {getText(slice.primary.button_text) || "Let's connect"}

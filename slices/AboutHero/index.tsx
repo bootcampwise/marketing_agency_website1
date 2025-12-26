@@ -40,22 +40,43 @@ const AboutHero = ({ slice }: AboutHeroProps): JSX.Element => {
       </section>
 
       {slice.primary.show_client_logos && slice.items.length > 0 && (
-        <section className="container mx-auto px-4 lg:px-8 py-8">
-          <div className="border-t border-gray-200 pt-12">
-            <div className="flex flex-wrap justify-between items-center gap-8 grayscale opacity-60">
-              {slice.items.map(
-                (item, index: number) =>
-                  item.logo?.url && (
-                    <Image
-                      key={index}
-                      src={item.logo.url}
-                      alt={item.logo_alt || `Client logo ${index + 1}`}
-                      width={120}
-                      height={40}
-                      className="object-contain"
-                    />
-                  ),
-              )}
+        <section className="container mx-auto px-4 lg:px-8 py-8 overflow-hidden">
+          <div className="pt-12">
+            <div className="relative">
+              <div className="flex animate-scroll-left">
+                {slice.items.map(
+                  (item, index: number) =>
+                    item.logo?.url && (
+                      <div
+                        key={`logo-1-${index}`}
+                        className="relative w-32 h-12 mx-8 flex-shrink-0 grayscale opacity-60 hover:opacity-100 transition-all duration-300"
+                      >
+                        <Image
+                          src={item.logo.url}
+                          alt={item.logo_alt || `Client logo ${index + 1}`}
+                          fill
+                          className="object-contain"
+                        />
+                      </div>
+                    ),
+                )}
+                {slice.items.map(
+                  (item, index: number) =>
+                    item.logo?.url && (
+                      <div
+                        key={`logo-2-${index}`}
+                        className="relative w-32 h-12 mx-8 flex-shrink-0 grayscale opacity-60 hover:opacity-100 transition-all duration-300"
+                      >
+                        <Image
+                          src={item.logo.url}
+                          alt={item.logo_alt || `Client logo ${index + 1}`}
+                          fill
+                          className="object-contain"
+                        />
+                      </div>
+                    ),
+                )}
+              </div>
             </div>
           </div>
         </section>

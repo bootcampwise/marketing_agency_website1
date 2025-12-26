@@ -2,6 +2,7 @@ import { HeroProps } from "@/types";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import Image from "next/image";
+import Link from "next/link";
 import { getText } from "@/lib/prismicHelpers";
 
 const Hero = ({ slice }: HeroProps): JSX.Element => {
@@ -19,9 +20,12 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
           <p className="font-sans text-lg lg:text-[20px] mb-10 text-dark max-w-[500px] leading-relaxed">
             {getText(slice.primary.description)}
           </p>
-          <button className="font-sans bg-dark text-white rounded-[14px] hover:bg-dark/90 transition-all px-9 py-5 text-xl w-full sm:w-auto">
+          <Link
+            href="#"
+            className="font-sans bg-dark text-white rounded-[14px] hover:bg-dark/90 transition-all px-9 py-5 text-xl w-full sm:w-auto inline-block text-center"
+          >
             {getText(slice.primary.button_text) || "Book a consultation"}
-          </button>
+          </Link>
         </div>
         <div className="relative flex justify-center lg:justify-end">
           {slice.primary.hero_image?.url && (

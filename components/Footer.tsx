@@ -126,12 +126,11 @@ export default function Footer() {
           <div className="pt-8 border-t border-white/20">
             <div className="flex flex-col sm:flex-row justify-start items-start sm:items-center gap-4">
               <p className="text-sm">© 2023 Positivus. All Rights Reserved.</p>
-              <Link
-                href="/privacy"
-                className="text-sm hover:text-primary transition-colors underline"
+              <div
+                className="text-sm hover:text-primary transition-colors underline cursor-not-allowed opacity-70"
               >
                 Privacy Policy
-              </Link>
+              </div>
             </div>
           </div>
         </div>

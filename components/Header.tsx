@@ -40,13 +40,12 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
-            <Link
-              href="#contact"
-              className="border border-dark px-6 py-3 rounded-lg inline-block"
+            <div
+              className="border border-dark px-6 py-3 rounded-lg inline-block cursor-not-allowed opacity-70"
               style={{ fontFamily: "Space Grotesk", fontSize: "20px" }}
             >
               Request a quote
-            </Link>
+            </div>
           </nav>
 
           <button
@@ -73,13 +72,12 @@ export default function Header() {
                   {link.label}
                 </Link>
               ))}
-              <Link
-                href="#contact"
-                className="btn-secondary text-center"
+              <div
+                className="btn-secondary text-center cursor-not-allowed opacity-70"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Request a quote
-              </Link>
+              </div>
             </nav>
           </div>
         )}
